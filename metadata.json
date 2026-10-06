@@ -1,0 +1,6 @@
+{
+  "name": "Hbattery - Cửa hàng Pin Dùng 1 Lần Chính Hãng",
+  "description": "Hệ sinh thái pin dùng 1 lần cao cấp Hbattery: Alkaline, Lithium, Pin cúc áo, Zinc-Air cho mọi thiết bị gia đình và công nghiệp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
