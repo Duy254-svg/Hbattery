@@ -55,7 +55,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
         </div>
         {showBadge && (
           <span className="text-[10px] uppercase font-bold tracking-widest text-sky-500 font-mono -mt-1">
-            Primary Single-Use
+            Energy Ecosystem
           </span>
         )}
       </div>

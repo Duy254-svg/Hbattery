@@ -1,6 +1,6 @@
 import { BatteryProduct, DeviceRecommendation } from '../types/battery';
 
-export const PRODUCTS: BatteryProduct[] = [
+const RAW_PRODUCTS: BatteryProduct[] = [
   // --- 1. ALKALINE KIỀM CHÍNH ---
   {
     id: 'h-aa-alkaline',
@@ -2116,7 +2116,1663 @@ export const PRODUCTS: BatteryProduct[] = [
       border: 'border-blue-400/40'
     }
   }
+,
+  {
+    "id": "h-aa-rechargeable-nimh",
+    "name": "Hbattery Pro Ni-MH AA Rechargeable 2800mAh",
+    "series": "Pro Rechargeable Ni-MH",
+    "tagline": "Sạc lại 2,100 lần - Mật độ dung lượng cao Low Self-Discharge",
+    "code": "HR6 / NH15 / 1.2V Ni-MH",
+    "size": "AA",
+    "chemistry": "nimh",
+    "voltage": "1.2V",
+    "capacity": "2,800 mAh",
+    "shelfLifeYears": 10,
+    "operatingTemp": "-20°C đến 50°C",
+    "badge": "Sạc Lại 2,100 Lần",
+    "description": "Dòng pin sạc AA cao cấp hàng đầu của Hbattery với dung lượng thực 2,800mAh. Công nghệ giữ điện Low Self-Discharge (LSD) duy trì 85% dung lượng sau 1 năm không sử dụng. Tương thích mọi củ sạc Ni-MH chuẩn quốc tế.",
+    "features": [
+      "Độ bền 2,100 chu kỳ nạp xả - Tiết kiệm hàng triệu đồng so với pin dùng 1 lần",
+      "Đã sạc sẵn năng lượng mặt trời tại nhà máy (Pre-charged), mua về dùng ngay",
+      "Không bị hiệu ứng nhớ (Zero Memory Effect) - có thể nạp bù bất cứ lúc nào",
+      "An toàn chống chảy nước 100%, bảo vệ vi mạch thiết bị đắt tiền"
+    ],
+    "recommendedDevices": [
+      "Đèn flash máy ảnh chuyên nghiệp (Canon, Nikon, Godox)",
+      "Micro hát karaoke không dây gia đình & sân khấu",
+      "Tay cầm chơi game không dây Xbox Series X, Nintendo Wii",
+      "Chuột máy tính không dây & Bàn phím Bluetooth",
+      "Đồ chơi xe điều khiển tốc độ cao"
+    ],
+    "warningNote": "Dùng củ sạc chuyên dụng cho pin Ni-MH (1.2V - 1.4V). Không dùng sạc pin Lithium 3.7V.",
+    "packOptions": [
+      {
+        "id": "p-2",
+        "name": "Vỉ 2 viên sạc sẵn",
+        "count": 2,
+        "price": 95000,
+        "originalPrice": 120000
+      },
+      {
+        "id": "p-4",
+        "name": "Vỉ 4 viên kèm hộp nhựa",
+        "count": 4,
+        "price": 179000,
+        "originalPrice": 220000,
+        "isPopular": true
+      },
+      {
+        "id": "p-8",
+        "name": "Hộp 8 viên (Tiết kiệm)",
+        "count": 8,
+        "price": 330000,
+        "originalPrice": 420000
+      }
+    ],
+    "rating": 4.96,
+    "reviewCount": 840,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-emerald-600 via-sky-600 to-slate-900",
+      "accent": "#059669",
+      "border": "border-emerald-500/30"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 2100
+  },
+  {
+    "id": "h-aaa-rechargeable-nimh",
+    "name": "Hbattery Pro Ni-MH AAA Rechargeable 1100mAh",
+    "series": "Pro Rechargeable Ni-MH",
+    "tagline": "Pin đũa sạc lại cao cấp - 2,100 chu kỳ nạp",
+    "code": "HR03 / NH24 / 1.2V Micro",
+    "size": "AAA",
+    "chemistry": "nimh",
+    "voltage": "1.2V",
+    "capacity": "1,100 mAh",
+    "shelfLifeYears": 10,
+    "operatingTemp": "-20°C đến 50°C",
+    "badge": "Sạc Lại 2,100 Lần",
+    "description": "Pin đũa AAA sạc lại dung lượng 1,100mAh cho remote tìm kiếm giọng nói, máy đo huyết áp và điện thoại bàn không dây Panasonic. Điện thế ổn định, xả êm ái.",
+    "features": [
+      "Công nghệ tái nạp 2,100 lần bền bỉ thân thiện với môi trường",
+      "Tự xả cực thấp, giữ dung lượng ổn định khi cất trong ngăn kéo",
+      "Vỏ hợp kim phủ niken chống rỉ sét và rò rỉ hóa chất"
+    ],
+    "recommendedDevices": [
+      "Điện thoại bàn kéo dài không dây (Panasonic Dect Phone)",
+      "Điều khiển TV giọng nói Sony, LG, Samsung",
+      "Máy đo huyết áp bắp tay Omron",
+      "Đèn pin siêu nhỏ đeo trán chạy bộ"
+    ],
+    "warningNote": "Dùng bộ sạc Ni-MH chuẩn ngắt tự động khi đầy.",
+    "packOptions": [
+      {
+        "id": "p-2",
+        "name": "Vỉ 2 viên sạc sẵn",
+        "count": 2,
+        "price": 79000,
+        "originalPrice": 99000
+      },
+      {
+        "id": "p-4",
+        "name": "Vỉ 4 viên kèm hộp đựng",
+        "count": 4,
+        "price": 149000,
+        "originalPrice": 190000,
+        "isPopular": true
+      },
+      {
+        "id": "p-8",
+        "name": "Hộp 8 viên",
+        "count": 8,
+        "price": 279000,
+        "originalPrice": 350000
+      }
+    ],
+    "rating": 4.93,
+    "reviewCount": 620,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-emerald-600 via-sky-600 to-slate-900",
+      "accent": "#059669",
+      "border": "border-emerald-500/30"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 2100
+  },
+  {
+    "id": "h-c-rechargeable-nimh",
+    "name": "Hbattery Pro Ni-MH Size C Rechargeable 5000mAh",
+    "series": "Pro Rechargeable Ni-MH",
+    "tagline": "Pin trung sạc lại dung lượng 5,000mAh cho đèn cứu hộ & loa",
+    "code": "HR14 / 1.2V Size C",
+    "size": "C",
+    "chemistry": "nimh",
+    "voltage": "1.2V",
+    "capacity": "5,000 mAh",
+    "shelfLifeYears": 8,
+    "operatingTemp": "-20°C đến 50°C",
+    "badge": "Dung Lượng Lớn 5000mAh",
+    "description": "Pin trung Size C sạc lại thay thế hoàn hảo cho pin C dùng 1 lần tốn kém trong loa phát thanh, đèn tuần tra công trường và đồ chơi trẻ em cỡ lớn.",
+    "features": [
+      "Dung lượng thực 5,000mAh hoạt động liên tục nhiều ngày",
+      "Nạp xả 1,200 lần, giảm 99% lượng rác thải kim loại",
+      "Khung vỏ kim loại chịu va đập công nghiệp"
+    ],
+    "recommendedDevices": [
+      "Loa phát thanh cầm tay tuyên truyền / cứu nạn",
+      "Đèn tuần tra đêm bảo vệ công trường",
+      "Máy bơm phao hơi cắm trại",
+      "Robot đồ chơi cỡ lớn"
+    ],
+    "warningNote": "Sạc bằng bộ sạc đa năng hỗ trợ khay Size C.",
+    "packOptions": [
+      {
+        "id": "p-2",
+        "name": "Vỉ 2 viên sạc sẵn",
+        "count": 2,
+        "price": 165000,
+        "originalPrice": 210000,
+        "isPopular": true
+      },
+      {
+        "id": "p-4",
+        "name": "Hộp 4 viên",
+        "count": 4,
+        "price": 310000,
+        "originalPrice": 390000
+      }
+    ],
+    "rating": 4.91,
+    "reviewCount": 230,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-emerald-700 to-slate-900",
+      "accent": "#047857",
+      "border": "border-emerald-500/30"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 1200
+  },
+  {
+    "id": "h-d-rechargeable-nimh",
+    "name": "Hbattery Pro Ni-MH Size D Rechargeable 10000mAh",
+    "series": "Pro Rechargeable Ni-MH",
+    "tagline": "Pin đại sạc lại dung lượng cực đại 10,000mAh",
+    "code": "HR20 / 1.2V Size D",
+    "size": "D",
+    "chemistry": "nimh",
+    "voltage": "1.2V",
+    "capacity": "10,000 mAh",
+    "shelfLifeYears": 8,
+    "operatingTemp": "-20°C đến 50°C",
+    "badge": "Siêu Khủng 10,000mAh",
+    "description": "Viên pin đại Size D sạc lại mạnh nhất của Hbattery. Dung lượng khổng lồ 10,000mAh, cấp nguồn bền bỉ cho bếp gas khách sạn, máy phát sóng và hệ thống đèn công trường.",
+    "features": [
+      "Mức dung lượng 10,000mAh kỷ lục thế giới cho pin Ni-MH",
+      "Xả liên tục không ngắt quãng, chịu tải nặng xuất sắc",
+      "Sạc lại hơn 1,000 lần - một viên thay thế hàng ngàn pin dùng 1 lần"
+    ],
+    "recommendedDevices": [
+      "Bếp gas công nghiệp nhà hàng & khách sạn",
+      "Hệ thống cấp nước nóng tự động khách sạn",
+      "Đèn cứu nạn hàng hải & Đèn rọi tàu thuyền",
+      "Máy dò kim loại dưới lòng đất"
+    ],
+    "warningNote": "Dùng củ sạc chuyên dụng có dòng nạp tối thiểu 1A - 2A cho pin Size D.",
+    "packOptions": [
+      {
+        "id": "p-2",
+        "name": "Vỉ 2 viên sạc sẵn",
+        "count": 2,
+        "price": 290000,
+        "originalPrice": 360000,
+        "isPopular": true
+      },
+      {
+        "id": "p-4",
+        "name": "Hộp 4 viên",
+        "count": 4,
+        "price": 550000,
+        "originalPrice": 690000
+      }
+    ],
+    "rating": 4.95,
+    "reviewCount": 310,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-emerald-700 to-slate-900",
+      "accent": "#047857",
+      "border": "border-emerald-500/30"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 1000
+  },
+  {
+    "id": "h-9v-rechargeable-nimh",
+    "name": "Hbattery Pro Ni-MH 9V Rechargeable 300mAh",
+    "series": "Pro Rechargeable Ni-MH",
+    "tagline": "Pin vuông 9V sạc lại 1,000 lần cho micro & nhạc cụ",
+    "code": "HR9V / 6F22 / 8.4V True",
+    "size": "9V",
+    "chemistry": "nimh",
+    "voltage": "9V",
+    "capacity": "300 mAh",
+    "shelfLifeYears": 7,
+    "operatingTemp": "-10°C đến 50°C",
+    "badge": "Chuẩn 8.4V Sân Khấu",
+    "description": "Pin vuông 9V sạc lại chuyên dụng cho phòng thu, micro hội trường, đàn guitar điện thùng và đồng hồ vạn năng. Cấu trúc 7 cell ghép nối đạt điện thế 8.4V thực tế không bị rè âm thanh.",
+    "features": [
+      "Loại bỏ hoàn toàn tiếng ồn ù xì trong truyền âm thanh guitar / micro",
+      "Sạc lại 1,000 lần, tiết kiệm chi phí mua pin vuông liên tục",
+      "Tự xả thấp, sẵn sàng biểu diễn bất cứ lúc nào"
+    ],
+    "recommendedDevices": [
+      "Micro không dây phòng trà, sân khấu tiệc cưới",
+      "Đàn Guitar thùng điện tử EQ Preamp (Fishman, Taylor)",
+      "Đồng hồ vạn năng kim & số Fluke, Sanwa, Hioki",
+      "Bộ đàm cảnh sát giao thông và an ninh"
+    ],
+    "warningNote": "Không xả cạn kiệt dưới 7.0V để duy trì tuổi thọ cell tốt nhất.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "Hộp 1 viên sạc sẵn",
+        "count": 1,
+        "price": 89000,
+        "originalPrice": 115000
+      },
+      {
+        "id": "p-2",
+        "name": "Hộp 2 viên (Kèm hộp bảo vệ)",
+        "count": 2,
+        "price": 169000,
+        "originalPrice": 220000,
+        "isPopular": true
+      },
+      {
+        "id": "p-4",
+        "name": "Bộ 4 viên chuyên nghiệp",
+        "count": 4,
+        "price": 320000,
+        "originalPrice": 420000
+      }
+    ],
+    "rating": 4.92,
+    "reviewCount": 450,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-emerald-600 via-sky-600 to-slate-900",
+      "accent": "#059669",
+      "border": "border-emerald-500/30"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 1000
+  },
+  {
+    "id": "h-nicd-subc-2200",
+    "name": "Hbattery Heavy-Duty Ni-Cd Sub-C 2200mAh (High-Drain 15C)",
+    "series": "Industrial Heavy-Duty Ni-Cd",
+    "tagline": "Pin xả tức thời 33A chuyên đóng pin máy khoan & công cụ",
+    "code": "Sub-C / SC 2200 / 1.2V Tab",
+    "size": "Sub-C",
+    "chemistry": "nicd",
+    "voltage": "1.2V",
+    "capacity": "2,200 mAh",
+    "shelfLifeYears": 8,
+    "operatingTemp": "-20°C đến 65°C",
+    "badge": "Xả Cao 15C (33A)",
+    "description": "Tế bào pin Ni-Cd Sub-C chuyên dụng cho thợ đóng khối pin máy khoan, máy cắt sắt, siết bu lông Makita, Bosch, DeWalt. Khả năng xả tức thời 15C (33A) không sụt áp, chịu va đập và chịu quá sạc cực tốt.",
+    "features": [
+      "Dòng xả liên tục 15C (33A) - động cơ máy khoan không bị nghẽn lực khi khoan bê tông",
+      "Chịu nhiệt độ vận hành cao tới 65°C mà không bị phù nề",
+      "Đầu cực có sẵn kẽm hàn bấm máy công nghiệp chắc chắn",
+      "Nạp xả 1,000 chu kỳ tải nặng liên tục"
+    ],
+    "recommendedDevices": [
+      "Máy khoan pin cầm tay 12V / 18V (Makita, Bosch, Ryobi)",
+      "Máy siết bu lông & máy cắt tôn mini",
+      "Xe ô tô mô hình điều khiển từ xa RC Nitro Buggy",
+      "Đèn cứu hộ dự phòng công nghiệp PCCC"
+    ],
+    "warningNote": "Sản phẩm có sẵn lá hàn kẽm. Khi ghép nối khối pin cần thợ có kỹ thuật và sạc đúng chuẩn Ni-Cd.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "1 viên có sẵn lá kẽm",
+        "count": 1,
+        "price": 42000,
+        "originalPrice": 55000
+      },
+      {
+        "id": "p-5",
+        "name": "Bộ 5 viên (Ghép khối 6V)",
+        "count": 5,
+        "price": 199000,
+        "originalPrice": 260000
+      },
+      {
+        "id": "p-10",
+        "name": "Bộ 10 viên (Ghép khối 12V)",
+        "count": 10,
+        "price": 380000,
+        "originalPrice": 490000,
+        "isPopular": true
+      }
+    ],
+    "rating": 4.89,
+    "reviewCount": 380,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-amber-600 via-orange-600 to-slate-900",
+      "accent": "#d97706",
+      "border": "border-amber-500/30"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 1000,
+    "dischargeCurrent": "33A (15C)"
+  },
+  {
+    "id": "h-nicd-d-4500",
+    "name": "Hbattery Industrial Ni-Cd Size D 4500mAh Emergency",
+    "series": "Industrial Heavy-Duty Ni-Cd",
+    "tagline": "Pin sạc đệm chịu nhiệt cao chuyên dụng PCCC",
+    "code": "D-NiCd-4500 / High-Temp Cell",
+    "size": "D",
+    "chemistry": "nicd",
+    "voltage": "1.2V",
+    "capacity": "4,500 mAh",
+    "shelfLifeYears": 8,
+    "operatingTemp": "-20°C đến 70°C",
+    "badge": "Chịu Nhiệt 70°C PCCC",
+    "description": "Pin Ni-Cd công nghiệp Size D thiết kế để chịu chế độ sạc đệm liên tục 24/24 trong môi trường nóng bức của đèn thoát hiểm, thang thoát hiểm PCCC và thiết bị quân sự.",
+    "features": [
+      "Chịu nhiệt độ môi trường lên tới 70°C - không bị suy giảm chất điện phân",
+      "Độ bền sạc đệm nổi (Trickle charge) kéo dài 5 - 8 năm",
+      "Khung vỏ thép mạ kẽm chống rung xóc và ăn mòn axit"
+    ],
+    "recommendedDevices": [
+      "Đèn chiếu sáng sự cố khẩn cấp cao cấp Paragon, Kentom",
+      "Hệ thống báo động an ninh nhà xưởng",
+      "Máy phát điện công nghiệp khởi động"
+    ],
+    "warningNote": "Sản phẩm phục vụ kỹ thuật công nghiệp PCCC.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "1 viên có lá hàn",
+        "count": 1,
+        "price": 85000,
+        "originalPrice": 110000
+      },
+      {
+        "id": "p-4",
+        "name": "Bộ 4 viên (Khối 4.8V PCCC)",
+        "count": 4,
+        "price": 320000,
+        "originalPrice": 420000,
+        "isPopular": true
+      }
+    ],
+    "rating": 4.88,
+    "reviewCount": 190,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-amber-600 via-orange-600 to-slate-900",
+      "accent": "#d97706",
+      "border": "border-amber-500/30"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 1000
+  },
+  {
+    "id": "h-18650-li-ion-3500",
+    "name": "Hbattery Elite Li-ion 18650 3500mAh (Button Top Protected)",
+    "series": "Elite Li-ion Protected",
+    "tagline": "Mạch bảo vệ thông minh Seiko - Đèn pin tuần tra cao cấp",
+    "code": "INR18650-35E / 3.7V / 13Wh",
+    "size": "18650",
+    "chemistry": "li-ion",
+    "voltage": "3.7V",
+    "capacity": "3,500 mAh",
+    "shelfLifeYears": 10,
+    "operatingTemp": "-20°C đến 60°C",
+    "badge": "Mạch Bảo Vệ Nhật Bản",
+    "description": "Pin sạc Li-ion 18650 đầu lồi (Button Top) dung lượng đỉnh cao 3,500mAh. Tích hợp mạch bảo vệ điện tử thông minh Seiko (Nhật Bản) chống quá sạc 4.2V, chống xả cạn 2.5V và chống đoản mạch 100%. Lựa chọn chuẩn mực cho đèn pin Fenix, Olight, Nitecore.",
+    "features": [
+      "Dung lượng thực 3,500mAh đo chuẩn trên máy nạp xả phân tích",
+      "Mạch bảo vệ IC Seiko 3 MOSFET kép ngắt dòng tức thì khi có sự cố",
+      "Đầu lồi mạ vàng dẫn điện hoàn hảo, không kén khay đèn pin",
+      "Hơn 1,000 chu kỳ nạp xả vẫn giữ 80% dung lượng ban đầu"
+    ],
+    "recommendedDevices": [
+      "Đèn pin tuần tra dã ngoại Fenix, Olight, Sofirn, Nitecore",
+      "Gimbal chống rung máy ảnh DJI Ronin, Zhiyun Crane",
+      "Quạt cầm tay mini động cơ không chổi than",
+      "Máy đo khoảng cách laser địa chính"
+    ],
+    "warningNote": "Pin có kích thước dài ~69mm do có mạch bảo vệ. Sạc bằng củ sạc Li-ion 4.2V.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "Hộp 1 viên kèm hộp nhựa chống sốc",
+        "count": 1,
+        "price": 125000,
+        "originalPrice": 160000
+      },
+      {
+        "id": "p-2",
+        "name": "Hộp 2 viên (Kèm case đựng)",
+        "count": 2,
+        "price": 235000,
+        "originalPrice": 300000,
+        "isPopular": true
+      },
+      {
+        "id": "p-4",
+        "name": "Bộ 4 viên chuyên nghiệp",
+        "count": 4,
+        "price": 449000,
+        "originalPrice": 580000
+      }
+    ],
+    "rating": 4.98,
+    "reviewCount": 960,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-sky-600 via-blue-700 to-slate-900",
+      "accent": "#0284c7",
+      "border": "border-sky-500/40"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 1200,
+    "dischargeCurrent": "10A Continuous"
+  },
+  {
+    "id": "h-18650-highdrain-30a",
+    "name": "Hbattery Extreme Li-ion 18650 3000mAh 30A High-Drain",
+    "series": "Extreme High Drain Li-ion",
+    "tagline": "Xả liên tục 30A tức thời 45A - Pin máy cưa, máy khoan pin",
+    "code": "VTC6 Pro / Flat Top / 30A",
+    "size": "18650",
+    "chemistry": "li-ion",
+    "voltage": "3.7V",
+    "capacity": "3,000 mAh",
+    "shelfLifeYears": 10,
+    "operatingTemp": "-20°C đến 65°C",
+    "badge": "Xả Cực Khủng 30A",
+    "description": "Cell pin 18650 đầu bằng (Flat Top) dòng xả cao vô địch 30A liên tục. Nội trở siêu thấp chỉ 11mΩ, không nóng pin khi cưa gỗ dày, siết bu lông xe tải hoặc máy bay mô hình FPV Drone tốc độ cao.",
+    "features": [
+      "Dòng xả liên tục 30A, xung tức thời 45A không sụt áp",
+      "Nội trở cực thấp 11-13 mΩ hạn chế tỏa nhiệt tối đa",
+      "Độ đồng đều điện áp 99.9% giữa các cell - tối ưu đóng pack máy khoan",
+      "Cell chính hãng kiểm tra mã vạch QR code chống giả"
+    ],
+    "recommendedDevices": [
+      "Máy khoan bê tông 3 chức năng, máy mài góc cầm tay",
+      "Máy bay không người lái FPV Racing Drone, Flycam tải nặng",
+      "Khối pin xe trượt điện Scooter, xe đạp điện tốc độ cao",
+      "Máy hút bụi không dây cầm tay Dyson, Dreame"
+    ],
+    "warningNote": "Cell đầu bằng không có mạch bảo vệ rời. Khi sử dụng đóng khối cần gắn mạch BMS phù hợp.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "1 viên đầu bằng Flat Top",
+        "count": 1,
+        "price": 110000,
+        "originalPrice": 140000
+      },
+      {
+        "id": "p-4",
+        "name": "Hộp 4 viên (Đo cân áp chuẩn)",
+        "count": 4,
+        "price": 410000,
+        "originalPrice": 520000,
+        "isPopular": true
+      },
+      {
+        "id": "p-10",
+        "name": "Hộp 10 viên đóng khối pin",
+        "count": 10,
+        "price": 950000,
+        "originalPrice": 1250000
+      }
+    ],
+    "rating": 4.97,
+    "reviewCount": 780,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-sky-500 via-blue-600 to-slate-900",
+      "accent": "#0284c7",
+      "border": "border-sky-500/40"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 1000,
+    "dischargeCurrent": "30A Continuous / 45A Pulse"
+  },
+  {
+    "id": "h-21700-li-ion-5000",
+    "name": "Hbattery Ultra Li-ion 21700 5000mAh 15A (Tesla Grade)",
+    "series": "Ultra 21700 Automotive Grade",
+    "tagline": "Mật độ năng lượng thế hệ mới 18.5Wh - Đèn pin & Xe điện",
+    "code": "INR21700-50E / 3.7V / 5000mAh",
+    "size": "21700",
+    "chemistry": "li-ion",
+    "voltage": "3.7V",
+    "capacity": "5,000 mAh",
+    "shelfLifeYears": 10,
+    "operatingTemp": "-20°C đến 60°C",
+    "badge": "Mật Độ Năng Lượng Đỉnh Cao",
+    "description": "Chuẩn pin tương lai kích thước Ø21 × 70 mm với dung lượng khổng lồ 5,000mAh, chứa nhiều năng lượng hơn 50% so với 18650 truyền thống. Ứng dụng công nghệ lõi cao cấp tiêu chuẩn ô tô điện thế hệ mới.",
+    "features": [
+      "Năng lượng 18.5 Wh trong thân hình gọn gàng",
+      "Dòng xả liên tục 15A (xung 20A) thoải mái cho đèn pin chiếu xa 1km",
+      "Tuổi thọ hơn 1,000 chu kỳ nạp xả vẫn duy trì hơn 80% dung tích",
+      "Độ an toàn đạt chứng chỉ UN38.3 vận chuyển hàng không quốc tế"
+    ],
+    "recommendedDevices": [
+      "Đèn pin siêu sáng chiếu xa 21700 (Fenix TK20R, Olight Seeker, Sofirn)",
+      "Pin dự phòng laptop công suất cao Type-C 100W",
+      "Đóng khối pin xe máy điện VinFast, xe đạp trợ lực điện",
+      "Máy chiếu cầm tay di động"
+    ],
+    "warningNote": "Đường kính 21mm và chiều dài 70mm, không lắp vừa các thiết bị chuẩn 18650.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "1 viên đầu phẳng",
+        "count": 1,
+        "price": 145000,
+        "originalPrice": 185000
+      },
+      {
+        "id": "p-2",
+        "name": "Hộp 2 viên kèm vỏ bảo vệ",
+        "count": 2,
+        "price": 275000,
+        "originalPrice": 350000,
+        "isPopular": true
+      },
+      {
+        "id": "p-4",
+        "name": "Bộ 4 viên chuyên nghiệp",
+        "count": 4,
+        "price": 520000,
+        "originalPrice": 680000
+      }
+    ],
+    "rating": 4.96,
+    "reviewCount": 520,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-sky-600 via-blue-800 to-slate-900",
+      "accent": "#0284c7",
+      "border": "border-sky-500/40"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 1200,
+    "dischargeCurrent": "15A Continuous"
+  },
+  {
+    "id": "h-26650-li-ion-5500",
+    "name": "Hbattery Mega Li-ion 26650 5500mAh 20A Deep Dive",
+    "series": "Mega 26650 Heavy Duty",
+    "tagline": "Pin đại Li-ion cho đèn lặn biển 5,000 Lumens & Loa kéo",
+    "code": "INR26650-55A / 3.7V / 20.3Wh",
+    "size": "26650",
+    "chemistry": "li-ion",
+    "voltage": "3.7V",
+    "capacity": "5,500 mAh",
+    "shelfLifeYears": 10,
+    "operatingTemp": "-20°C đến 60°C",
+    "badge": "Đèn Lặn Biển 5,500mAh",
+    "description": "Pin đại hình trụ đường kính 26mm, dung lượng cực đại 5,500mAh. Cung cấp năng lượng liên tục 4-6 giờ cho đèn lặn biển chuyên nghiệp dưới độ sâu 100 mét nước và loa kéo công suất lớn.",
+    "features": [
+      "Dung lượng 5,500mAh xả sâu liên tục không bị tụt áp",
+      "Dòng xả 20A chịu tải động cơ và LED công suất cao COB",
+      "Vỏ thép cường lực chống va chạm đáy biển"
+    ],
+    "recommendedDevices": [
+      "Đèn lặn biển chuyên nghiệp Archon, Sofirn SD05",
+      "Đèn pin tìm kiếm cứu nạn hàng hải",
+      "Loa kéo Bluetooth dã ngoại ngoài trời",
+      "Trạm kích bình ắc quy ô tô di động"
+    ],
+    "warningNote": "Kích cỡ lớn đường kính 26mm. Sạc bằng khay sạc rộng.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "1 viên có hộp chống sốc",
+        "count": 1,
+        "price": 165000,
+        "originalPrice": 210000
+      },
+      {
+        "id": "p-2",
+        "name": "Hộp 2 viên",
+        "count": 2,
+        "price": 310000,
+        "originalPrice": 400000,
+        "isPopular": true
+      }
+    ],
+    "rating": 4.94,
+    "reviewCount": 340,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-sky-700 via-blue-900 to-black",
+      "accent": "#0369a1",
+      "border": "border-sky-500/40"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 1000,
+    "dischargeCurrent": "20A Continuous"
+  },
+  {
+    "id": "h-9v-li-ion-usbc",
+    "name": "Hbattery Smart USB-C Rechargeable Li-ion 9V 1000mAh",
+    "series": "Direct USB-C Rechargeable",
+    "tagline": "Cắm sạc Type-C trực tiếp trên thân pin - Không cần củ sạc ngoài",
+    "code": "9V-USBC-1000 / Smart BMS",
+    "size": "9V",
+    "chemistry": "li-ion",
+    "voltage": "9V",
+    "capacity": "1,000 mAh",
+    "shelfLifeYears": 8,
+    "operatingTemp": "-10°C đến 50°C",
+    "badge": "Cổng Sạc Type-C Trực Tiếp",
+    "description": "Pin vuông 9V thông minh thế hệ mới nhất của Hbattery: Tích hợp cổng cắm sạc Type-C ngay trên thân pin. Chỉ cần cắm cáp sạc điện thoại là pin tự nạp đầy trong 1.5 giờ. Đèn LED báo đỏ khi đang sạc, xanh khi đầy pin.",
+    "features": [
+      "Cổng Type-C tiện lợi - dùng chung cáp sạc điện thoại thoại, sạc dự phòng",
+      "Dung lượng 1,000mAh gấp 3 lần pin 9V Ni-MH thông thường",
+      "Mạch ổn áp DC-DC duy trì đúng 9.0V liên tục từ 100% đến 0%",
+      "Tặng kèm cáp sạc chia 2 đầu Type-C tiện lợi"
+    ],
+    "recommendedDevices": [
+      "Micro hát karaoke không dây chuyên nghiệp",
+      "Đàn Guitar điện thùng Acoustic Preamp EQ",
+      "Bộ dò dây cáp mạng viễn thông & Đồng hồ vạn năng",
+      "Máy đo khoảng cách laser, máy đo độ ồn"
+    ],
+    "warningNote": "Sạc qua cổng USB Type-C 5V. KHÔNG cắm vào máy sạc pin 9V kiểu cũ.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "Hộp 1 viên + Cáp sạc Type-C",
+        "count": 1,
+        "price": 169000,
+        "originalPrice": 220000
+      },
+      {
+        "id": "p-2",
+        "name": "Hộp 2 viên + Cáp sạc đôi (Tiết kiệm)",
+        "count": 2,
+        "price": 310000,
+        "originalPrice": 410000,
+        "isPopular": true
+      },
+      {
+        "id": "p-4",
+        "name": "Hộp 4 viên cho phòng thu",
+        "count": 4,
+        "price": 590000,
+        "originalPrice": 790000
+      }
+    ],
+    "rating": 4.99,
+    "reviewCount": 890,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-sky-500 via-cyan-600 to-slate-900",
+      "accent": "#06b6d4",
+      "border": "border-sky-400/50"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 1200
+  },
+  {
+    "id": "h-aa-lithium-1-5v-usbc",
+    "name": "Hbattery Constant 1.5V AA Li-ion USB-C (3400mWh)",
+    "series": "Direct USB-C Rechargeable",
+    "tagline": "Điện thế không đổi 1.5V từ đầu đến cuối - Sạc cổng Type-C",
+    "code": "AA-USBC-1.5V / 3400mWh",
+    "size": "AA",
+    "chemistry": "li-ion",
+    "voltage": "1.5V",
+    "capacity": "2,260 mAh (3,400 mWh)",
+    "shelfLifeYears": 8,
+    "operatingTemp": "-20°C đến 60°C",
+    "badge": "Điện Áp Phẳng 1.5V Chuẩn",
+    "description": "Đột phá công nghệ pin sạc: Lõi Lithium-ion 3.7V kết hợp chip hạ áp thông minh hạ về chính xác 1.50V liên tục. Thiết bị luôn nhận đủ 100% công suất không bị yếu dần như pin kiềm hay pin Ni-MH 1.2V.",
+    "features": [
+      "Điện áp phẳng tuyệt đối 1.5V - Khóa vân tay không báo pin ảo",
+      "Cổng cắm sạc Type-C trực tiếp trên đầu viên pin, sạc đầy chỉ trong 70 phút",
+      "Năng lượng khủng 3,400 mWh",
+      "Đèn LED nhấp nháy xanh khi sạc, sáng đứng khi đầy pin"
+    ],
+    "recommendedDevices": [
+      "Khóa cửa vân tay thông minh (Kaadas, Yale, Bosch, Samsung)",
+      "Đồ chơi xe điều khiển tốc độ cao (chạy max tốc độ suốt buổi)",
+      "Máy đo huyết áp, máy tạo bọt sữa cà phê",
+      "Micro karaoke không dây"
+    ],
+    "warningNote": "Chỉ sạc qua cổng Type-C 5V. Tặng kèm cáp sạc 4 đầu Type-C.",
+    "packOptions": [
+      {
+        "id": "p-2",
+        "name": "Hộp 2 viên + Cáp sạc đôi Type-C",
+        "count": 2,
+        "price": 185000,
+        "originalPrice": 240000
+      },
+      {
+        "id": "p-4",
+        "name": "Hộp 4 viên + Cáp sạc 4 đầu",
+        "count": 4,
+        "price": 349000,
+        "originalPrice": 450000,
+        "isPopular": true
+      },
+      {
+        "id": "p-8",
+        "name": "Hộp 8 viên (Khóa cửa vân tay)",
+        "count": 8,
+        "price": 650000,
+        "originalPrice": 850000
+      }
+    ],
+    "rating": 4.98,
+    "reviewCount": 1120,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-sky-500 via-cyan-600 to-slate-900",
+      "accent": "#06b6d4",
+      "border": "border-sky-400/50"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 1500
+  },
+  {
+    "id": "h-aaa-lithium-1-5v-usbc",
+    "name": "Hbattery Constant 1.5V AAA Li-ion USB-C (1200mWh)",
+    "series": "Direct USB-C Rechargeable",
+    "tagline": "Pin đũa AAA sạc Type-C điện áp chuẩn 1.5V",
+    "code": "AAA-USBC-1.5V / 1200mWh",
+    "size": "AAA",
+    "chemistry": "li-ion",
+    "voltage": "1.5V",
+    "capacity": "800 mAh (1,200 mWh)",
+    "shelfLifeYears": 8,
+    "operatingTemp": "-20°C đến 60°C",
+    "badge": "Cổng Type-C Trực Tiếp",
+    "description": "Pin đũa AAA sạc lại tiện lợi nhất hiện nay: Cổng cắm Type-C siêu nhỏ gọn trên thân pin, sạc đầy thần tốc trong 45 phút. Không cần mang theo củ sạc cồng kềnh khi đi du lịch hay công tác.",
+    "features": [
+      "Sạc đầy cực nhanh 45 phút qua cổng sạc Type-C điện thoại",
+      "Điện thế ổn định 1.5V mạnh mẽ cho remote TV chuột bay và nhiệt kế",
+      "Sạc lại 1,500 chu kỳ - không chảy nước gây hỏng mạch"
+    ],
+    "recommendedDevices": [
+      "Điều khiển TV giọng nói, chuột máy tính không dây",
+      "Nhiệt kế hồng ngoại đo trán Microlife, Berrcom",
+      "Bút trình chiếu laser thuyết trình Logitech"
+    ],
+    "warningNote": "Chỉ cắm sạc qua cổng cáp Type-C.",
+    "packOptions": [
+      {
+        "id": "p-2",
+        "name": "Hộp 2 viên + Cáp sạc đôi",
+        "count": 2,
+        "price": 165000,
+        "originalPrice": 210000
+      },
+      {
+        "id": "p-4",
+        "name": "Hộp 4 viên + Cáp sạc 4 đầu",
+        "count": 4,
+        "price": 310000,
+        "originalPrice": 400000,
+        "isPopular": true
+      }
+    ],
+    "rating": 4.95,
+    "reviewCount": 650,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-sky-500 via-cyan-600 to-slate-900",
+      "accent": "#06b6d4",
+      "border": "border-sky-400/50"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 1500
+  },
+  {
+    "id": "h-na-ion-18650-1500",
+    "name": "Hbattery NextGen Sodium-ion 18650 1500mAh (-40°C Extreme)",
+    "series": "NextGen Sodium-ion Power",
+    "tagline": "Pin Natri-ion thế hệ mới - Chống cháy nổ tuyệt đối, chịu lạnh -40°C",
+    "code": "SIB18650 / Na-ion / 3.1V",
+    "size": "Na-18650",
+    "chemistry": "na-ion",
+    "voltage": "3.1V",
+    "capacity": "1,500 mAh",
+    "shelfLifeYears": 12,
+    "operatingTemp": "-40°C đến 80°C",
+    "badge": "Chống Cháy Nổ 100% (-40°C)",
+    "description": "Công nghệ pin Natri-ion (Sodium-ion) tiên phong đột phá: Không dùng kim loại hiếm Lithium, Cobalt, Niken. An toàn tuyệt đối chống cháy nổ kể cả khi bị đâm thủng hoặc chập mạch. Hoạt động hoàn hảo ở nhiệt độ âm -40°C đến nắng gắt 80°C, giữ 90% dung lượng trong băng tuyết.",
+    "features": [
+      "An toàn số 1 thế giới: Vượt qua thử nghiệm đâm thủng kim loại (Nail Penetration) mà không phát hỏa",
+      "Chịu lạnh siêu việt: Xả tốt ở -40°C, trong khi pin Li-ion bị đông cứng ở -20°C",
+      "Tốc độ sạc siêu tốc 4C: Sạc đạt 80% chỉ trong 15 phút",
+      "Độ bền chu kỳ nạp xả hơn 3,000 chu kỳ - tuổi thọ trên 10 năm"
+    ],
+    "recommendedDevices": [
+      "Camera an ninh giám sát kho lạnh âm sâu & trạm thời tiết đỉnh núi",
+      "Thiết bị GPS theo dõi công ten nơ hàng lạnh viễn dương",
+      "Hệ thống lưu trữ điện năng lượng mặt trời vùng cao băng giá",
+      "Đèn pin dã ngoại leo núi tuyết và thám hiểm hang động"
+    ],
+    "warningNote": "Điện áp làm việc 3.1V (dải 1.5V - 4.0V). Sạc bằng bộ sạc hỗ trợ chế độ Na-ion.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "1 viên Sodium-ion 18650",
+        "count": 1,
+        "price": 99000,
+        "originalPrice": 135000
+      },
+      {
+        "id": "p-2",
+        "name": "Hộp 2 viên Sodium-ion",
+        "count": 2,
+        "price": 189000,
+        "originalPrice": 260000,
+        "isPopular": true
+      },
+      {
+        "id": "p-4",
+        "name": "Bộ 4 viên chuyên dụng",
+        "count": 4,
+        "price": 359000,
+        "originalPrice": 490000
+      }
+    ],
+    "rating": 4.97,
+    "reviewCount": 410,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-teal-600 via-cyan-700 to-slate-900",
+      "accent": "#0d9488",
+      "border": "border-teal-400/50"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 3000
+  },
+  {
+    "id": "h-na-ion-32140-10ah",
+    "name": "Hbattery Industrial Sodium-ion 32140 10Ah (Cylindrical Cell)",
+    "series": "NextGen Sodium-ion Power",
+    "tagline": "Tế bào trụ Natri-ion công nghiệp Ø32 × 140 mm cho trạm lưu điện",
+    "code": "SIB32140 / Na-ion / 3.1V 10Ah",
+    "size": "Na-32140",
+    "chemistry": "na-ion",
+    "voltage": "3.1V",
+    "capacity": "10,000 mAh (31 Wh)",
+    "shelfLifeYears": 12,
+    "operatingTemp": "-40°C đến 80°C",
+    "badge": "Tế Bào Trụ 10Ah Bền Bỉ",
+    "description": "Cell pin Natri-ion kích thước lớn 32140 với đầu cọc ốc vít M6 ren cơ khí dễ dàng lắp ráp. Chuyên dùng đóng trạm lưu trữ điện mặt trời gia đình không sợ nguy cơ cháy nổ, thân thiện với môi trường.",
+    "features": [
+      "Dung lượng 10Ah (31Wh) mỗi cell - cọc ren M6 bắt ốc siết bulong không cần máy hàn điểm",
+      "Độ bền hơn 3,500 chu kỳ nạp xả sâu DOD 100%",
+      "Có thể xả cạn về 0.0V để vận chuyển an toàn tuyệt đối mà không bị chai pin"
+    ],
+    "recommendedDevices": [
+      "Trạm lưu trữ điện gia đình ESS Sodium thế hệ mới",
+      "Hệ thống UPS công nghiệp nhà xưởng",
+      "Xe điện du lịch nội khu và xe nâng hàng kho lạnh"
+    ],
+    "warningNote": "Tế bào công nghiệp có đầu ren vít M6. Cần đấu nối qua mạch BMS Sodium.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "1 cell 32140 kèm ốc vít M6",
+        "count": 1,
+        "price": 210000,
+        "originalPrice": 280000
+      },
+      {
+        "id": "p-4",
+        "name": "Bộ 4 cell (Hệ 12V 10Ah)",
+        "count": 4,
+        "price": 790000,
+        "originalPrice": 1050000,
+        "isPopular": true
+      },
+      {
+        "id": "p-8",
+        "name": "Bộ 8 cell (Hệ 24V 10Ah)",
+        "count": 8,
+        "price": 1520000,
+        "originalPrice": 1990000
+      }
+    ],
+    "rating": 4.93,
+    "reviewCount": 220,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-teal-600 via-cyan-700 to-slate-900",
+      "accent": "#0d9488",
+      "border": "border-teal-400/50"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 3500
+  },
+  {
+    "id": "h-accu-12v-35ah",
+    "name": "Hbattery Deep Cycle VRLA AGM 12V-35Ah",
+    "series": "PowerMax VRLA Deep Cycle",
+    "tagline": "Ắc quy AGM xả sâu chuyên dụng cho Xe lăn điện y tế & Xe Golf",
+    "code": "AGM12-35 / Deep Cycle Heavy",
+    "size": "12V-35Ah",
+    "chemistry": "lead-acid-vrla",
+    "voltage": "12V",
+    "capacity": "35 Ah (420Wh)",
+    "shelfLifeYears": 6,
+    "operatingTemp": "-20°C đến 55°C",
+    "badge": "Xả Sâu DOD 80%",
+    "description": "Ắc quy khô VRLA AGM xả sâu cao cấp dung lượng 35Ah, nặng 10.5 kg. Chuyên trang bị cho xe lăn điện bệnh viện, xe đẩy người khuyết tật, xe golf mini và kích điện Inverter gia đình. Bản cực hợp kim chì-canxi siêu tinh khiết.",
+    "features": [
+      "Công nghệ xả sâu Deep Cycle chịu hơn 600 chu kỳ xả ở mức 80% DOD",
+      "Tấm lót sợi thủy tinh AGM vi hạt hấp thụ 100% dung dịch axit, không bao giờ rò rỉ",
+      "Cọc đồng M6 ren trong chống mòn tiếp xúc điện tốt",
+      "Miễn bảo dưỡng trọn đời, không cần châm nước cất"
+    ],
+    "recommendedDevices": [
+      "Xe lăn điện bệnh viện và xe 3 bánh điện cho người cao tuổi",
+      "Xe golf mini khu nghỉ dưỡng và xe chở khách tham quan",
+      "Bộ kích điện Inverter 12V lên 220V chạy quạt cúp điện",
+      "Thuyền câu dã ngoại gắn máy đẩy điện chạy êm"
+    ],
+    "warningNote": "Sạc bằng bộ sạc ắc quy 12V thông minh có dòng sạc khuyên dùng từ 3.5A đến 7A.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "1 Bình ắc quy 12V 35Ah",
+        "count": 1,
+        "price": 920000,
+        "originalPrice": 1150000,
+        "isPopular": true
+      },
+      {
+        "id": "p-2",
+        "name": "Cặp 2 bình (Đấu nối 24V xe lăn điện)",
+        "count": 2,
+        "price": 1790000,
+        "originalPrice": 2250000
+      }
+    ],
+    "rating": 4.94,
+    "reviewCount": 390,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-neutral-900 to-black",
+      "accent": "#0284c7",
+      "border": "border-sky-500/40"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 600
+  },
+  {
+    "id": "h-accu-12v-50ah",
+    "name": "Hbattery Telecom & Solar Gel 12V-50Ah",
+    "series": "PowerMax VRLA Deep Cycle",
+    "tagline": "Ắc quy Gel công nghệ Đức chuyên trạm viễn thông & Điện mặt trời",
+    "code": "GEL12-50 / Pure Gel Tech",
+    "size": "12V-50Ah",
+    "chemistry": "lead-acid-vrla",
+    "voltage": "12V",
+    "capacity": "50 Ah (600Wh)",
+    "shelfLifeYears": 10,
+    "operatingTemp": "-25°C đến 60°C",
+    "badge": "Gel Chuẩn Đức 10 Năm",
+    "description": "Ắc quy Gel khô kín khí 12V 50Ah (nặng 16.5 kg) ứng dụng công nghệ chất điện phân Gel Silica nhập khẩu Đức. Khả năng chịu nhiệt độ môi trường khắc nghiệt, chống sunfat hóa bản cực và tuổi thọ thiết kế lên đến 10 năm.",
+    "features": [
+      "Chất điện phân Gel đồng nhất chống đông tụ và chống bốc hơi axit",
+      "Khả năng tự hồi phục sau khi bị xả cạn kiệt tốt hơn 50% so với ắc quy AGM thường",
+      "Chuyên dùng trong các trạm viễn thông hải đảo và hệ thống điện mặt trời độc lập",
+      "Quai xách đúc liền thân bình chịu tải tiện lợi mang vác"
+    ],
+    "recommendedDevices": [
+      "Trạm phát sóng trạm viễn thông BTS di động 4G/5G",
+      "Hệ thống lưu điện năng lượng mặt trời gia đình",
+      "Tàu cá đánh bắt xa bờ thắp sáng đèn LED câu mực đêm",
+      "Hệ thống camera giám sát giao thông thông minh đường cao tốc"
+    ],
+    "warningNote": "Cài đặt điện áp nạp sạc đệm (Float) ở mức 13.5V - 13.8V.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "1 Bình ắc quy Gel 12V 50Ah",
+        "count": 1,
+        "price": 1480000,
+        "originalPrice": 1850000,
+        "isPopular": true
+      },
+      {
+        "id": "p-2",
+        "name": "Bộ 2 bình (Hệ thống 24V lưu điện)",
+        "count": 2,
+        "price": 2890000,
+        "originalPrice": 3600000
+      }
+    ],
+    "rating": 4.96,
+    "reviewCount": 410,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-neutral-900 to-black",
+      "accent": "#0284c7",
+      "border": "border-sky-500/40"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 800
+  },
+  {
+    "id": "h-accu-12v-100ah",
+    "name": "Hbattery Industrial Solar Deep Cycle Gel 12V-100Ah",
+    "series": "PowerMax VRLA Deep Cycle",
+    "tagline": "Ắc quy lưu điện công nghiệp siêu nặng 30kg - Năng lượng mặt trời",
+    "code": "GEL12-100 / Industrial Deep Cycle",
+    "size": "12V-100Ah",
+    "chemistry": "lead-acid-vrla",
+    "voltage": "12V",
+    "capacity": "100 Ah (1,200Wh)",
+    "shelfLifeYears": 12,
+    "operatingTemp": "-25°C đến 60°C",
+    "badge": "Công Nghiệp Nặng 30kg",
+    "description": "Đỉnh cao của dòng ắc quy chì Gel: Dung lượng 100Ah (1.2kWh), trọng lượng 30.5 kg với kết cấu vỏ nhựa ABS chống cháy gia cường. Giải pháp dự trữ điện năng ổn định giá thành kinh tế cho hệ thống điện mặt trời trang trại và viễn thông.",
+    "features": [
+      "Dung lượng lưu trữ 1.2 kWh năng lượng cho gia đình khi mất điện",
+      "Hơn 1,200 chu kỳ nạp xả sâu ở mức DOD 50%",
+      "Cọc cực đồng nguyên khối chịu dòng tải cao tới 500A không bị nóng chảy",
+      "Bảo hành chính hãng 24 tháng đổi mới"
+    ],
+    "recommendedDevices": [
+      "Hệ thống điện mặt trời gia đình, trang trại chăn nuôi",
+      "Bộ lưu điện Inverter sóng sin chuẩn 1000W - 3000W",
+      "Trạm phát điện dự phòng phòng khám y tế",
+      "Tàu du lịch và du thuyền chạy điện"
+    ],
+    "warningNote": "Trọng lượng nặng ~30.5 kg. Vận chuyển bằng xe chuyên dụng hoặc có quai xách hai người nâng.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "1 Bình ắc quy Gel 12V 100Ah (30.5 kg)",
+        "count": 1,
+        "price": 2750000,
+        "originalPrice": 3400000,
+        "isPopular": true
+      },
+      {
+        "id": "p-2",
+        "name": "Hệ 2 bình 24V 100Ah (2.4kWh)",
+        "count": 2,
+        "price": 5350000,
+        "originalPrice": 6700000
+      },
+      {
+        "id": "p-4",
+        "name": "Hệ 4 bình 48V 100Ah (4.8kWh)",
+        "count": 4,
+        "price": 10400000,
+        "originalPrice": 13200000
+      }
+    ],
+    "rating": 4.97,
+    "reviewCount": 520,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-neutral-900 to-black",
+      "accent": "#0284c7",
+      "border": "border-sky-500/40"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 1200
+  },
+  {
+    "id": "h-accu-12v-14ah",
+    "name": "Hbattery High-Rate AGM 12V-14Ah",
+    "series": "PowerMax VRLA Deep Cycle",
+    "tagline": "Ắc quy xe điện & Khởi động máy nổ công suất lớn",
+    "code": "6-DZM-14 / 12V 14Ah",
+    "size": "12V-14Ah",
+    "chemistry": "lead-acid-vrla",
+    "voltage": "12V",
+    "capacity": "14 Ah",
+    "shelfLifeYears": 5,
+    "operatingTemp": "-20°C đến 50°C",
+    "badge": "Xả Cao Khởi Động",
+    "description": "Ắc quy khô AGM dòng xả cao chuyên dụng cho bộ 4-5 bình xe đạp điện 48V-60V, máy cắt cỏ tự hành và máy nổ phát điện gia đình.",
+    "features": [
+      "Công nghệ tấm cực chì dày chịu tải tăng tốc xe điện liên tục",
+      "Chống rung xóc mặt đường gồ ghề cực tốt",
+      "Khô kín khí 100% không lo trào axit"
+    ],
+    "recommendedDevices": [
+      "Xe đạp điện Nijia, Asama, Giant (Bộ 4 bình 48V)",
+      "Máy cắt cỏ người lái Honda, Husqvarna",
+      "Máy nổ phát điện xăng 5kW khởi động đề"
+    ],
+    "warningNote": "Khi thay cho xe điện nên thay cả bộ cùng lúc để tuổi thọ đồng đều.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "1 Bình 12V 14Ah",
+        "count": 1,
+        "price": 430000,
+        "originalPrice": 530000
+      },
+      {
+        "id": "p-4",
+        "name": "Bộ 4 bình cho xe đạp điện 48V",
+        "count": 4,
+        "price": 1650000,
+        "originalPrice": 2100000,
+        "isPopular": true
+      }
+    ],
+    "rating": 4.92,
+    "reviewCount": 330,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-neutral-900 to-black",
+      "accent": "#0284c7",
+      "border": "border-sky-500/40"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 550
+  },
+  {
+    "id": "h-accu-6v-10ah",
+    "name": "Hbattery Emergency AGM 6V-10Ah",
+    "series": "PowerMax VRLA Deep Cycle",
+    "tagline": "Ắc quy lưu điện chiếu sáng sự cố đường hầm & Cân điện tử",
+    "code": "6V-10Ah / Standby Use",
+    "size": "6V-10Ah",
+    "chemistry": "lead-acid-vrla",
+    "voltage": "6V",
+    "capacity": "10 Ah",
+    "shelfLifeYears": 6,
+    "operatingTemp": "-15°C đến 50°C",
+    "badge": "Chiếu Sáng Sự Cố",
+    "description": "Ắc quy khô 6V 10Ah cấp nguồn liên tục cho hệ thống chiếu sáng chỉ dẫn khẩn cấp đường hầm cao tốc và cân bàn điện tử tải trọng 300kg.",
+    "features": [
+      "Điện thế 6.0V dung lượng lớn 10Ah duy trì đèn LED sáng hơn 12 tiếng",
+      "Tự phóng điện thấp dưới 3% mỗi tháng",
+      "Chống rò rỉ đạt tiêu chuẩn an toàn PCCC quốc gia"
+    ],
+    "recommendedDevices": [
+      "Hệ thống đèn chỉ dẫn khẩn cấp hầm vượt sông, hầm đèo",
+      "Cân bàn điện tử 100kg - 500kg trong nhà máy",
+      "Xe ô tô điện trẻ em đồ chơi 6V công suất khỏe"
+    ],
+    "warningNote": "Tránh để bình cạn kiệt điện trong thời gian dài.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "1 Bình 6V 10Ah",
+        "count": 1,
+        "price": 220000,
+        "originalPrice": 280000,
+        "isPopular": true
+      },
+      {
+        "id": "p-2",
+        "name": "Cặp 2 bình",
+        "count": 2,
+        "price": 420000,
+        "originalPrice": 550000
+      }
+    ],
+    "rating": 4.9,
+    "reviewCount": 160,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-neutral-900 to-black",
+      "accent": "#0284c7",
+      "border": "border-sky-500/40"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 500
+  },
+  {
+    "id": "h-lifepo4-12v-100ah",
+    "name": "Hbattery Smart LiFePO4 12.8V-100Ah (Bluetooth Smart BMS)",
+    "series": "Smart LiFePO4 Energy Pro",
+    "tagline": "6,000 chu kỳ sạc - Theo dõi qua App điện thoại - Nhẹ chỉ 11kg",
+    "code": "LFP12-100 / 12.8V 1280Wh",
+    "size": "LiFePO4-12V",
+    "chemistry": "lifepo4",
+    "voltage": "12.8V",
+    "capacity": "100 Ah (1,280Wh)",
+    "shelfLifeYears": 15,
+    "operatingTemp": "-20°C đến 65°C",
+    "badge": "6,000 Chu Kỳ • Bluetooth",
+    "description": "Thế hệ pin lưu trữ đỉnh cao thay thế hoàn toàn bình ắc quy chì: Nặng chỉ 11.2 kg (nhẹ hơn 65% so với ắc quy chì 30kg cùng dung lượng), tích hợp chip Bluetooth 5.0 kết nối điện thoại thông minh theo dõi dung lượng pin %, số chu kỳ sạc, nhiệt độ và điện áp từng cell trong thời gian thực.",
+    "features": [
+      "Tuổi thọ phi thường 6,000 chu kỳ nạp xả - dùng bền bỉ trên 15 năm",
+      "Tích hợp kết nối Bluetooth theo dõi tình trạng pin qua App iOS / Android",
+      "Mạch Smart BMS 100A thông minh tự ngắt khi quá áp, quá dòng, quá nhiệt hoặc đoản mạch",
+      "Hóa học LiFePO4 chống cháy nổ tuyệt đối, không tỏa nhiệt dữ dội như pin Li-ion",
+      "Hỗ trợ mắc nối tiếp lên 48V hoặc mắc song song không giới hạn"
+    ],
+    "recommendedDevices": [
+      "Xe nhà di động Camper Van, RV dã ngoại gia đình",
+      "Thuyền cano câu cá, động cơ điện đẩy thuyền Trolling Motor",
+      "Hệ thống lưu điện năng lượng mặt trời 12V gia đình",
+      "Bộ lưu điện Inverter dự phòng cúp điện cho nhà phố"
+    ],
+    "warningNote": "Dùng củ sạc chuyên dụng chế độ LiFePO4 (điện áp ngắt 14.4V - 14.6V).",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "1 Thùng pin LiFePO4 12.8V 100Ah Bluetooth",
+        "count": 1,
+        "price": 6200000,
+        "originalPrice": 7900000,
+        "isPopular": true
+      },
+      {
+        "id": "p-2",
+        "name": "Bộ 2 thùng (Đấu nối 24V 100Ah)",
+        "count": 2,
+        "price": 11900000,
+        "originalPrice": 15500000
+      }
+    ],
+    "rating": 4.99,
+    "reviewCount": 460,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-sky-600 via-blue-700 to-slate-900",
+      "accent": "#0284c7",
+      "border": "border-sky-400/50"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 6000
+  },
+  {
+    "id": "h-lifepo4-24v-100ah",
+    "name": "Hbattery Solar Pro LiFePO4 25.6V-100Ah (2560Wh)",
+    "series": "Smart LiFePO4 Energy Pro",
+    "tagline": "Lưu trữ điện mặt trời chuyên nghiệp 2.56kWh - BMS 100A",
+    "code": "LFP24-100 / 25.6V 2560Wh",
+    "size": "LiFePO4-24V",
+    "chemistry": "lifepo4",
+    "voltage": "25.6V",
+    "capacity": "100 Ah (2,560Wh)",
+    "shelfLifeYears": 15,
+    "operatingTemp": "-20°C đến 65°C",
+    "badge": "Solar 2.56kWh Chuyên Nghiệp",
+    "description": "Khối pin lưu trữ LiFePO4 24V dung lượng 2.56 kWh thiết kế tối ưu cho các bộ Inverter hòa lưới có lưu trữ (Hybrid) và độc lập (Off-grid) chuẩn 24V. Khung nhôm tản nhiệt nguyên khối sang trọng, màn hình LCD hiển thị điện áp trực quan.",
+    "features": [
+      "Dung lượng thực 2,560 Wh lưu trữ thoải mái cho tủ lạnh, quạt, TV cả ngày cúp điện",
+      "Màn hình LCD màu hiển thị dung lượng %, điện áp và công suất tải tức thời",
+      "Chu kỳ sạc 6,000 lần - vận hành êm ái không tiếng ồn",
+      "Cổng giao tiếp CAN / RS485 đồng bộ dữ liệu với biến tần thông minh"
+    ],
+    "recommendedDevices": [
+      "Biến tần Inverter Hybrid Solar 24V (Growatt, Deye, Voltronic)",
+      "Hệ thống điện mặt trời trên thuyền bè nuôi trồng hải sản",
+      "Trạm viễn thông vùng sâu vùng xa không có lưới điện"
+    ],
+    "warningNote": "Đấu nối đúng cực âm dương và cài đặt thông số sạc LiFePO4 trên biến tần.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "1 Module LiFePO4 24V 100Ah (22 kg)",
+        "count": 1,
+        "price": 11800000,
+        "originalPrice": 14500000,
+        "isPopular": true
+      },
+      {
+        "id": "p-2",
+        "name": "Cặp 2 module (5.12 kWh)",
+        "count": 2,
+        "price": 22800000,
+        "originalPrice": 28500000
+      }
+    ],
+    "rating": 4.98,
+    "reviewCount": 280,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-sky-600 via-blue-700 to-slate-900",
+      "accent": "#0284c7",
+      "border": "border-sky-400/50"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 6000
+  },
+  {
+    "id": "h-lifepo4-48v-100ah",
+    "name": "Hbattery Powerwall LiFePO4 48V-100Ah (5.12kWh Treo Tường)",
+    "series": "Smart LiFePO4 Energy Pro",
+    "tagline": "Pin lưu trữ gia đình cao cấp 5.12kWh - Tương thích mọi Inverter Hybrid",
+    "code": "Powerwall-5120 / 51.2V 100Ah",
+    "size": "LiFePO4-48V",
+    "chemistry": "lifepo4",
+    "voltage": "51.2V",
+    "capacity": "100 Ah (5,120Wh)",
+    "shelfLifeYears": 15,
+    "operatingTemp": "-20°C đến 65°C",
+    "badge": "Powerwall 5.12kWh Treo Tường",
+    "description": "Module pin lưu trữ treo tường kiểu dáng siêu sang phong cách Powerwall công nghệ cao. Dung lượng 5.12kWh cung cấp nguồn điện liên tục cho gia đình khi cúp điện, tích hợp công tắc ngắt DC Breaker an toàn và giao tiếp thông minh với các biến tần Deye, Growatt, Luxpower, Sofar.",
+    "features": [
+      "Dung lượng 5.12 kWh (51.2V 100Ah) - Hỗ trợ ghép nối song song tối đa 15 bộ lên 76.8 kWh",
+      "Độ bền hơn 6,500 chu kỳ nạp xả - Bảo hành 5 năm chính hãng",
+      "Vỏ kim loại sơn tĩnh điện đen nhám công nghiệp, treo tường gọn đẹp thẩm mỹ",
+      "BMS thông minh hỗ trợ giao tiếp đa giao thức CAN / RS485 / RS232"
+    ],
+    "recommendedDevices": [
+      "Biến tần điện mặt trời Hybrid 48V (Deye, Luxpower, Growatt, Goodwe)",
+      "Hệ thống lưu trữ điện dự phòng biệt thự, nhà thông minh Smart Home",
+      "Trung tâm dữ liệu Server nhỏ và văn phòng công ty"
+    ],
+    "warningNote": "Sản phẩm nặng ~46 kg. Đội ngũ kỹ thuật hỗ trợ lắp đặt hoặc dùng giá treo tường chịu lực.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "1 Bộ Powerwall 5.12kWh kèm giá treo tường",
+        "count": 1,
+        "price": 21500000,
+        "originalPrice": 26500000,
+        "isPopular": true
+      },
+      {
+        "id": "p-2",
+        "name": "Combo 2 bộ (10.24kWh)",
+        "count": 2,
+        "price": 41900000,
+        "originalPrice": 52000000
+      }
+    ],
+    "rating": 4.99,
+    "reviewCount": 390,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-sky-600 via-blue-700 to-slate-900",
+      "accent": "#0284c7",
+      "border": "border-sky-400/50"
+    },
+    "isRechargeable": true,
+    "rechargeCycles": 6500
+  },
+  {
+    "id": "h-solar-60w-portable",
+    "name": "Hbattery SolarPro Gấp Gọn Di Động 60W (USB-C PD 45W)",
+    "series": "SolarPro Portable Energy",
+    "tagline": "4 nếp gấp siêu gọn - Cổng Type-C PD 45W sạc trực tiếp Laptop & Điện thoại",
+    "code": "SP-60W-ETFE / Foldable",
+    "size": "Solar-60W",
+    "chemistry": "solar",
+    "voltage": "18V",
+    "capacity": "60W Peak Power",
+    "shelfLifeYears": 20,
+    "operatingTemp": "-20°C đến 70°C",
+    "badge": "Gấp Gọn • Sạc Laptop Type-C",
+    "description": "Tấm pin năng lượng mặt trời dã ngoại gấp gọn 4 khúc thông minh của Hbattery. Ứng dụng tế bào quang điện Monocrystalline hiệu suất cao 24.2% phủ màng ETFE chống trầy xước. Tích hợp trực tiếp hộp sạc thông minh gồm cổng Type-C PD 45W, cổng USB Quick Charge 3.0 và ngõ ra DC 18V nạp trạm sạc dự phòng.",
+    "features": [
+      "Gấp lại nhỏ gọn như cặp tài liệu (nặng chỉ 1.9 kg), dễ dàng bỏ balo dã ngoại",
+      "Cổng Type-C PD 45W sạc thẳng cho MacBook, Dell XPS, iPhone và điện thoại Android",
+      "Hiệu suất quang năng 24.2% - vẫn thu điện tốt khi trời râm nhẹ",
+      "Bề mặt phủ ETFE cao cấp chống nước mưa IP65 và chống bám bụi bẩn"
+    ],
+    "recommendedDevices": [
+      "Cắm trại dã ngoại Camping, Trekking leo núi, Đi phượt xa",
+      "Sạc trực tiếp flycam DJI, máy ảnh, gimbal và đèn pin dã ngoại",
+      "Nạp cho pin dự phòng và trạm phát điện di động LiFePO4",
+      "Cứu hộ khẩn cấp khi mất điện lưới dài ngày"
+    ],
+    "warningNote": "Trải tấm pin dưới ánh nắng trực tiếp không bị bóng râm che để đạt công suất tối đa.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "1 Tấm pin 60W kèm bộ cáp sạc đa năng",
+        "count": 1,
+        "price": 1350000,
+        "originalPrice": 1750000,
+        "isPopular": true
+      },
+      {
+        "id": "p-2",
+        "name": "Combo 2 tấm (Đấu song song 120W)",
+        "count": 2,
+        "price": 2550000,
+        "originalPrice": 3400000
+      }
+    ],
+    "rating": 4.97,
+    "reviewCount": 680,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-amber-500 via-sky-600 to-slate-900",
+      "accent": "#f59e0b",
+      "border": "border-amber-400/40"
+    },
+    "isSolar": true,
+    "solarWattage": "60W",
+    "efficiency": "24.2%"
+  },
+  {
+    "id": "h-solar-100w-etfe",
+    "name": "Hbattery SolarPro Khung Nhôm 100W IP68 Monocrystalline",
+    "series": "SolarPro Photovoltaic Module",
+    "tagline": "Tấm quang điện đơn tinh thể khung nhôm Anode - Nạp bình ắc quy 12V",
+    "code": "SP-100W-Mono / 18.5V 5.4A",
+    "size": "Solar-100W",
+    "chemistry": "solar",
+    "voltage": "18.5V",
+    "capacity": "100W (5.41A)",
+    "shelfLifeYears": 25,
+    "operatingTemp": "-40°C đến 85°C",
+    "badge": "Khung Nhôm IP68 Bền 25 Năm",
+    "description": "Tấm pin mặt trời khung nhôm tiêu chuẩn cao cấp 100W Monocrystalline. Kính cường lực tán xạ hạt thấp 3.2mm chịu lực va đập mưa đá, khung nhôm Anodized chống ăn mòn muối biển. Chuyên lắp trên nóc xe dã ngoại Camper, tàu thuyền và hệ thống đèn đường năng lượng mặt trời.",
+    "features": [
+      "Bảo hành hiệu suất 25 năm duy trì trên 80% công suất danh định",
+      "Hộp đấu nối IP68 có sẵn diode chặn chống dòng ngược ban đêm",
+      "Dây cáp chuyên dụng năng lượng mặt trời 4mm² dài 90cm kèm đầu cắm MC4 chuẩn quốc tế",
+      "Tương thích hoàn hảo để nạp bình ắc quy 12V qua bộ điều khiển sạc PWM hoặc MPPT"
+    ],
+    "recommendedDevices": [
+      "Nóc xe dã ngoại RV, Camper Van, Xe bán tải dã ngoại",
+      "Tàu bè đánh cá, cano du lịch biển",
+      "Hệ thống bơm nước tưới tiêu nông nghiệp năng lượng mặt trời",
+      "Hệ thống camera an ninh nương rẫy không có điện lưới"
+    ],
+    "warningNote": "Cần kết nối qua bộ điều khiển sạc Solar Controller trước khi đưa vào bình ắc quy.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "1 Tấm pin 100W khung nhôm",
+        "count": 1,
+        "price": 950000,
+        "originalPrice": 1250000,
+        "isPopular": true
+      },
+      {
+        "id": "p-2",
+        "name": "Bộ 2 tấm 200W kèm đầu nối chữ Y",
+        "count": 2,
+        "price": 1820000,
+        "originalPrice": 2400000
+      },
+      {
+        "id": "p-4",
+        "name": "Bộ 4 tấm 400W cho hệ thống gia đình",
+        "count": 4,
+        "price": 3500000,
+        "originalPrice": 4800000
+      }
+    ],
+    "rating": 4.95,
+    "reviewCount": 510,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-amber-500 via-sky-600 to-slate-900",
+      "accent": "#f59e0b",
+      "border": "border-amber-400/40"
+    },
+    "isSolar": true,
+    "solarWattage": "100W",
+    "efficiency": "23.8%"
+  },
+  {
+    "id": "h-solar-200w-suitcase",
+    "name": "Hbattery SolarPro Vali Du Lịch 200W (Kèm Sạc MPPT 20A)",
+    "series": "SolarPro Portable Energy",
+    "tagline": "Thiết kế va li có chân chống gập mở kèm bộ điều khiển sạc thông minh MPPT",
+    "code": "SP-200W-Suitcase / MPPT-Included",
+    "size": "Solar-200W",
+    "chemistry": "solar",
+    "voltage": "19.8V",
+    "capacity": "200W Peak Power",
+    "shelfLifeYears": 20,
+    "operatingTemp": "-20°C đến 75°C",
+    "badge": "Vali Kèm Sạc MPPT Thông Minh",
+    "description": "Trọn bộ giải pháp năng lượng mặt trời di động tất cả trong một: Gồm 2 tấm pin 100W gập đôi dạng va li xách tay có tay cầm bọc da cao cấp, chân chống điều chỉnh góc đón nắng 45 độ, và bộ sạc thông minh MPPT 20A tích hợp sẵn phía sau lưng tấm pin giúp tăng hiệu suất thu điện thêm 30%.",
+    "features": [
+      "Bộ điều khiển sạc MPPT 20A thông minh tự nhận diện bình 12V / 24V, có màn hình LCD",
+      "Chân chống gập mở dễ dàng xoay theo hướng mặt trời buổi sáng và buổi chiều",
+      "Kẹp cá sấu và giắc Anderson cắm nhanh nạp bình ắc quy hoặc pin LiFePO4",
+      "Túi vải Oxford 900D chống nước bảo vệ khi di chuyển trên xe ô tô"
+    ],
+    "recommendedDevices": [
+      "Chuyến đi dã ngoại Caravan, cắm trại gia đình cuối tuần",
+      "Nạp điện nhanh cho trạm pin LiFePO4 dung lượng 1kWh - 2kWh",
+      "Đội ngũ cứu hộ cứu nạn dã chiến và làm phim ngoài thiên nhiên"
+    ],
+    "warningNote": "Bảo quản trong túi chống sốc khi di chuyển.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "Trọn bộ vali 200W + Sạc MPPT 20A + Túi đựng",
+        "count": 1,
+        "price": 3450000,
+        "originalPrice": 4200000,
+        "isPopular": true
+      }
+    ],
+    "rating": 4.99,
+    "reviewCount": 420,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-amber-500 via-sky-600 to-slate-900",
+      "accent": "#f59e0b",
+      "border": "border-amber-400/40"
+    },
+    "isSolar": true,
+    "solarWattage": "200W",
+    "efficiency": "24.5%"
+  },
+  {
+    "id": "h-solar-450w-bifacial",
+    "name": "Hbattery SolarPro Công Nghiệp 450W Bifacial (2 Mặt Kính)",
+    "series": "SolarPro Photovoltaic Module",
+    "tagline": "Half-Cell 144 tế bào 2 mặt kính cường lực - Thu quang năng cả mặt sau",
+    "code": "SP-450W-Bifacial / 41.5V 10.8A",
+    "size": "Solar-450W",
+    "chemistry": "solar",
+    "voltage": "41.5V",
+    "capacity": "450W (+25% mặt sau)",
+    "shelfLifeYears": 30,
+    "operatingTemp": "-40°C đến 85°C",
+    "badge": "2 Mặt Kính Kép Bifacial 450W",
+    "description": "Tấm quang điện công nghệ cao cấp nhất của Hbattery: Cấu trúc 2 mặt kính cường lực trong suốt (Bifacial Double Glass) kết hợp tế bào cắt nửa Half-cell 9BB. Mặt sau có khả năng hấp thụ ánh sáng phản xạ từ mặt đất, tăng thêm 15% - 25% tổng sản lượng điện sinh ra mỗi ngày.",
+    "features": [
+      "Hiệu suất quang năng cực đại 24.8% nhờ công nghệ tế bào N-Type TOPCon",
+      "Thu thêm đến 25% công suất điện từ mặt phản xạ phía sau",
+      "Cấu trúc 2 mặt kính chống ẩm, chống cháy loại A và chống hiện tượng suy giảm PID tuyệt đối",
+      "Bảo hành sản phẩm 15 năm và bảo hành sản lượng điện 30 năm"
+    ],
+    "recommendedDevices": [
+      "Hệ thống điện mặt trời hòa lưới áp mái nhà phố, biệt thự",
+      "Nhà xưởng công nghiệp và trang trại năng lượng mặt trời",
+      "Hệ thống sạc xe ô tô điện VinFast gia đình tại nhà"
+    ],
+    "warningNote": "Kích thước lớn 2,094 × 1,038 × 30 mm, nặng 25 kg. Cần khung giàn chuyên dụng.",
+    "packOptions": [
+      {
+        "id": "p-1",
+        "name": "1 Tấm pin công nghiệp 450W 2 mặt kính",
+        "count": 1,
+        "price": 2150000,
+        "originalPrice": 2750000
+      },
+      {
+        "id": "p-4",
+        "name": "Bộ 4 tấm (1.8 kWp)",
+        "count": 4,
+        "price": 8300000,
+        "originalPrice": 10800000,
+        "isPopular": true
+      },
+      {
+        "id": "p-10",
+        "name": "Kiện 10 tấm (4.5 kWp áp mái gia đình)",
+        "count": 10,
+        "price": 19900000,
+        "originalPrice": 26500000
+      }
+    ],
+    "rating": 4.98,
+    "reviewCount": 310,
+    "inStock": true,
+    "colorScheme": {
+      "primary": "from-amber-500 via-sky-600 to-slate-900",
+      "accent": "#f59e0b",
+      "border": "border-amber-400/40"
+    },
+    "isSolar": true,
+    "solarWattage": "450W",
+    "efficiency": "24.8%"
+  }
 ];
+
+// Giá bán thực tế cho toàn bộ mặt hàng Hbattery (chỉ hiển thị mỗi giá tiền)
+// Đảm bảo tất cả ắc quy VRLA AGM, chì acid, ắc quy Na-ion, Li-ion, LiFePO4, NiMH, NiCd đều có thuộc tính sạc được (isRechargeable: true)
+export const PRODUCTS: BatteryProduct[] = RAW_PRODUCTS.map((product) => {
+  const isRechargeableChem = ['lead-acid-vrla', 'nimh', 'nicd', 'li-ion', 'lifepo4', 'na-ion'].includes(product.chemistry);
+  const isRechargeable = product.isRechargeable ?? isRechargeableChem;
+  const rechargeCycles = product.rechargeCycles ?? (
+    product.chemistry === 'lifepo4' ? 6000 :
+    product.chemistry === 'na-ion' ? 3500 :
+    product.chemistry === 'li-ion' ? 1200 :
+    product.chemistry === 'nimh' ? 2100 :
+    product.chemistry === 'nicd' ? 1000 :
+    product.chemistry === 'lead-acid-vrla' ? 600 :
+    undefined
+  );
+
+  return {
+    ...product,
+    isRechargeable,
+    rechargeCycles,
+    badge: product.badge,
+    packOptions: product.packOptions.map((pack) => {
+      const originalPrice = pack.originalPrice || Math.round(pack.price * 1.3);
+      const finalPrice = Math.max(1000, Math.round((originalPrice * 0.25) / 1000) * 1000);
+      return {
+        ...pack,
+        price: finalPrice,
+        originalPrice: undefined
+      };
+    })
+  };
+});
 
 export const DEVICE_FINDER_DATA: DeviceRecommendation[] = [
   // Smartkey Ô tô & Xe máy
@@ -2456,5 +4112,41 @@ export const CHEMISTRY_INFOS = {
     summary: 'Ắc quy lưu điện miễn bảo dưỡng chuyên dụng cho bộ lưu điện UPS, cửa cuốn, xe đạp điện, xe máy và đèn sự cố PCCC.',
     lifespan: 'Tuổi thọ thiết kế 3 - 6 năm',
     leakProof: 'Công nghệ sợi thủy tinh AGM chống rò rỉ axit 100%'
+  },
+  'nimh': {
+    title: 'Pin Sạc Ni-MH (Nickel-Metal Hydride 1.2V / 9V)',
+    summary: 'Dung lượng cao sạc lại hơn 2,100 lần, công nghệ Low Self-Discharge giữ 85% pin sau 1 năm, tiết kiệm hàng triệu đồng cho micro, flash và đồ chơi.',
+    lifespan: '2,100 chu kỳ nạp xả (~10 năm)',
+    leakProof: 'Vỏ phủ Niken chống rỉ sét & rò rỉ hóa chất'
+  },
+  'nicd': {
+    title: 'Pin Sạc Ni-Cd Dòng Xả Khủng (Sub-C & Size D)',
+    summary: 'Dòng xả tức thời lên đến 15C (33A) chuyên dụng đóng khối pin máy khoan cầm tay, máy cưa và hệ thống sạc đệm đèn thoát hiểm PCCC chịu nhiệt 70°C.',
+    lifespan: '1,000 chu kỳ tải nặng',
+    leakProof: 'Vỏ thép mạ kẽm chịu chấn động công nghiệp'
+  },
+  'li-ion': {
+    title: 'Pin Sạc Li-ion (18650, 21700, 26650, 9V USB-C, 1.5V Constant)',
+    summary: 'Mật độ năng lượng cao gấp 4 lần, dòng xả 10A-30A cho đèn pin tuần tra, gimbal và dòng pin cắm sạc trực tiếp qua cổng USB-C tiện lợi.',
+    lifespan: '1,000 - 1,500 chu kỳ nạp',
+    leakProof: 'Mạch bảo vệ thông minh Seiko chống quá nạp quá xả'
+  },
+  'lifepo4': {
+    title: 'Pin Lưu Trữ Lithium Sắt Photphat LiFePO4 (12V / 24V / 48V)',
+    summary: 'Độ bền phi thường 6,000 chu kỳ sạc (15 năm), nhẹ hơn 65% so với ắc quy chì, tích hợp Smart BMS Bluetooth theo dõi qua điện thoại, chống cháy nổ tuyệt đối.',
+    lifespan: '6,000 - 6,500 chu kỳ (>15 năm)',
+    leakProof: 'Cấu trúc phốt phát bền vững không bao giờ bốc cháy'
+  },
+  'na-ion': {
+    title: 'Pin Natri-ion Thế Hệ Mới (Sodium-ion 18650 & 32140)',
+    summary: 'Đột phá không dùng Lithium hay Cobalt: Chống cháy nổ tuyệt đối khi bị đâm thủng, hoạt động ở nhiệt độ âm -40°C đến nắng gắt 80°C, sạc siêu nhanh 15 phút.',
+    lifespan: '3,000 - 3,500 chu kỳ nạp',
+    leakProof: 'Chất điện phân Natri an toàn cấp hàng không'
+  },
+  'solar': {
+    title: 'Pin Năng Lượng Mặt Trời Hbattery SolarPro (60W - 450W)',
+    summary: 'Tấm quang điện Monocrystalline hiệu suất 24.8% phủ màng ETFE chống trầy xước, dạng gấp gọn dã ngoại sạc trực tiếp Type-C laptop hoặc tấm khung nhôm nạp ắc quy.',
+    lifespan: 'Bảo hành hiệu suất 25 - 30 năm',
+    leakProof: 'Kính cường lực kép chịu lực mưa đá chuẩn IP68'
   }
 };

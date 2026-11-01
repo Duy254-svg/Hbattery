@@ -1,7 +1,6 @@
 import React from 'react';
-import { BatterySize } from '../types/battery';
-import { BatteryProduct } from '../types/battery';
-import { CircleDot, Layers, Box, Watch, Ear, Zap, Check, RotateCcw } from 'lucide-react';
+import { BatterySize, BatteryProduct } from '../types/battery';
+import { CircleDot, Layers, Box, Watch, Ear, Zap, Check, RotateCcw, BatteryCharging, Sun } from 'lucide-react';
 
 export interface SizeGroup {
   id: string;
@@ -118,6 +117,51 @@ export const SIZE_GROUPS: SizeGroup[] = [
       { size: 'A312', label: 'A312 (Màu Nâu)', sublabel: 'PR41 • Kích thước phổ biến nhất', voltage: '1.45V', commonUse: 'Máy trợ thính kỹ thuật số thông dụng' },
       { size: 'A13', label: 'A13 (Màu Cam)', sublabel: 'PR48 • Dung lượng cao 310mAh', voltage: '1.45V', commonUse: 'Máy trợ thính công suất lớn BTE' },
       { size: 'A675', label: 'A675 (Màu Xanh Lam)', sublabel: 'PR44 • Cực đại 650mAh', voltage: '1.45V', commonUse: 'Cấy ốc tai điện tử Cochlear' }
+    ]
+  },
+  {
+    id: 'rechargeable-cells',
+    name: '7. Pin Sạc Trụ Tròn Li-ion, Na-ion, NiMH & NiCd',
+    shortName: 'Pin Sạc Trụ (18650 / 21700 / Na-ion / Sub-C)',
+    icon: <BatteryCharging className="w-5 h-5 text-sky-400" />,
+    description: 'Pin sạc lại cao cấp: Li-ion mật độ cao, Natri-ion chống cháy nổ chịu lạnh -40°C, NiCd xả tức thời 15C',
+    sizes: [
+      { size: '18650', label: 'Li-ion 18650', sublabel: 'Ø18 × 65 mm (3500mAh / 30A Drain)', voltage: '3.7V', commonUse: 'Đèn pin tuần tra, Gimbal, Pin máy khoan' },
+      { size: '21700', label: 'Li-ion 21700', sublabel: 'Ø21 × 70 mm (5000mAh Tesla Grade)', voltage: '3.7V', commonUse: 'Đèn pin công suất cực đại, Xe điện' },
+      { size: '26650', label: 'Li-ion 26650', sublabel: 'Ø26 × 65 mm (5500mAh)', voltage: '3.7V', commonUse: 'Đèn lặn biển chuyên nghiệp, Loa kéo' },
+      { size: 'Sub-C', label: 'NiCd Sub-C', sublabel: 'Ø23 × 43 mm (2200mAh xả 15C)', voltage: '1.2V', commonUse: 'Máy khoan pin Makita, Bosch, Xe RC' },
+      { size: 'Na-18650', label: 'Sodium-ion 18650', sublabel: 'Pin Natri-ion Ø18 × 65 mm (-40°C)', voltage: '3.1V', commonUse: 'Quan trắc kho lạnh, Vùng băng giá tuyết' },
+      { size: 'Na-32140', label: 'Sodium-ion 32140', sublabel: 'Tế bào Natri Ø32 × 140 mm (10Ah)', voltage: '3.1V', commonUse: 'Trạm lưu trữ điện Sodium thế hệ mới' }
+    ]
+  },
+  {
+    id: 'rechargeable-storage',
+    name: '8. Ắc Quy Chì Xả Sâu & Pin Lưu Trữ LiFePO4',
+    shortName: 'Lưu Trữ LiFePO4 & Chì Axit Xả Sâu',
+    icon: <Zap className="w-5 h-5 text-amber-400" />,
+    description: 'Ắc quy chì axít xả sâu viễn thông và Pin lưu trữ Lithium sắt photphat LiFePO4 6000 chu kỳ nạp',
+    sizes: [
+      { size: 'LiFePO4-12V', label: 'LiFePO4 12V 100Ah', sublabel: '12.8V 1280Wh • Smart BMS Bluetooth', voltage: '12.8V', commonUse: 'Thuyền cano, RV dã ngoại, Điện gia đình' },
+      { size: 'LiFePO4-24V', label: 'LiFePO4 24V 100Ah', sublabel: '25.6V 2560Wh • Trạm lưu trữ Solar', voltage: '25.6V', commonUse: 'Hệ thống điện mặt trời độc lập Off-grid' },
+      { size: 'LiFePO4-48V', label: 'LiFePO4 48V 100Ah', sublabel: '51.2V 5120Wh (5.12kWh) Powerwall', voltage: '51.2V', commonUse: 'Hệ thống lưu trữ điện mặt trời hòa lưới hybrid' },
+      { size: '12V-35Ah', label: '12V 35Ah AGM', sublabel: 'Ắc quy AGM xả sâu chuyên dụng', voltage: '12.0V', commonUse: 'Xe lăn điện y tế, Xe golf mini' },
+      { size: '12V-50Ah', label: '12V 50Ah Gel Deep Cycle', sublabel: 'Ắc quy Gel xả sâu chịu nhiệt cao', voltage: '12.0V', commonUse: 'Trạm phát BTS viễn thông, Thắp sáng tàu cá' },
+      { size: '12V-100Ah', label: '12V 100Ah Solar Gel', sublabel: 'Ắc quy công nghiệp nặng 31 kg', voltage: '12.0V', commonUse: 'Lưu điện Inverter 220V công suất lớn' },
+      { size: '12V-14Ah', label: '12V 14Ah AGM', sublabel: 'Ắc quy khởi động máy cắt cỏ/máy nổ', voltage: '12.0V', commonUse: 'Máy phát điện gia đình, Xe điện 60V' },
+      { size: '6V-10Ah', label: '6V 10Ah AGM', sublabel: 'Ắc quy đèn cứu hộ chiếu sáng', voltage: '6.0V', commonUse: 'Hệ thống chiếu sáng sự cố đường hầm' }
+    ]
+  },
+  {
+    id: 'solar',
+    name: '9. Pin Năng Lượng Mặt Trời Solar (Hbattery SolarPro)',
+    shortName: 'Pin Mặt Trời Solar (60W - 450W)',
+    icon: <Sun className="w-5 h-5 text-amber-400" />,
+    description: 'Tấm quang điện Monocrystalline hiệu suất 24.5%, bề mặt ETFE chống trầy xước, sạc trực tiếp hoặc nạp bình lưu trữ',
+    sizes: [
+      { size: 'Solar-60W', label: 'SolarPro Gấp Gọn 60W', sublabel: '4 nếp gấp • Cổng Type-C PD 45W + USB', voltage: '18V', commonUse: 'Cắm trại dã ngoại, Sạc điện thoại, Laptop' },
+      { size: 'Solar-100W', label: 'SolarPro Khung Nhôm 100W', sublabel: 'Tấm đơn tinh thể Monocrystalline IP68', voltage: '18.5V', commonUse: 'Nạp bình ắc quy 12V xe dã ngoại RV, Đèn LED' },
+      { size: 'Solar-200W', label: 'SolarPro Vali Di Động 200W', sublabel: 'Kèm bộ điều khiển sạc thông minh MPPT', voltage: '19.8V', commonUse: 'Nạp trạm pin dự phòng LiFePO4, Chuyến đi xa' },
+      { size: 'Solar-450W', label: 'SolarPro Công Nghiệp 450W', sublabel: 'Half-Cell 2 mặt kính Bifacial 144 cells', voltage: '41.5V', commonUse: 'Mái nhà gia đình, Dự án điện mặt trời trang trại' }
     ]
   }
 ];

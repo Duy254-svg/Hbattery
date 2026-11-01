@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrandLogo } from './BrandLogo';
-import { ShoppingCart, Search, ShieldCheck, PhoneCall, Sparkles } from 'lucide-react';
+import { ShoppingCart, Search, Sparkles } from 'lucide-react';
 import { BatteryProduct } from '../types/battery';
 
 interface HeaderProps {
@@ -22,28 +22,6 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs">
-      {/* Top micro announcement bar */}
-      <div className="bg-slate-950 text-slate-300 text-xs py-1.5 px-4">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-2">
-            <span className="flex h-2 w-2 rounded-full bg-sky-400 animate-pulse"></span>
-            <span className="font-medium text-slate-200">
-              Chính hãng <span className="text-sky-400 font-bold">H</span>battery: Pin sơ cấp & ắc quy khô cao cấp, cam kết chống rò rỉ 10 năm
-            </span>
-          </div>
-          <div className="hidden sm:flex items-center gap-4 text-[11px] text-slate-400">
-            <span className="flex items-center gap-1">
-              <ShieldCheck className="w-3.5 h-3.5 text-sky-400" />
-              Bảo hành đền 100% nếu làm hỏng thiết bị
-            </span>
-            <span className="text-slate-600">|</span>
-            <span className="flex items-center gap-1">
-              <PhoneCall className="w-3.5 h-3.5 text-sky-400" />
-              Hotline tư vấn: <strong className="text-white">1900 8866</strong>
-            </span>
-          </div>
-        </div>
-      </div>
 
       {/* Main navigation row */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between gap-4">
@@ -115,6 +93,66 @@ export const Header: React.FC<HeaderProps> = ({
             Tất cả pin & ắc quy Hbattery
           </button>
           <button
+            onClick={() => onSelectChemistry('solar')}
+            className={`px-3 py-1 rounded-full font-bold transition-all whitespace-nowrap flex items-center gap-1 ${
+              selectedChemistry === 'solar'
+                ? 'bg-amber-500 text-slate-950 shadow-xs'
+                : 'bg-amber-50 text-amber-800 hover:bg-amber-100 border border-amber-300/60'
+            }`}
+          >
+            <span>☀️ Pin Mặt Trời Solar (60W-450W)</span>
+          </button>
+          <button
+            onClick={() => onSelectChemistry('li-ion')}
+            className={`px-3 py-1 rounded-full font-bold transition-all whitespace-nowrap ${
+              selectedChemistry === 'li-ion'
+                ? 'bg-sky-500 text-white shadow-xs'
+                : 'bg-white text-slate-600 hover:bg-slate-200/70 border border-slate-200'
+            }`}
+          >
+            Pin Sạc Li-ion & USB-C (18650/21700/26650/9V)
+          </button>
+          <button
+            onClick={() => onSelectChemistry('lifepo4')}
+            className={`px-3 py-1 rounded-full font-bold transition-all whitespace-nowrap ${
+              selectedChemistry === 'lifepo4'
+                ? 'bg-sky-500 text-white shadow-xs'
+                : 'bg-white text-slate-600 hover:bg-slate-200/70 border border-slate-200'
+            }`}
+          >
+            Pin Lưu Trữ LiFePO4 (12V/24V/48V Powerwall)
+          </button>
+          <button
+            onClick={() => onSelectChemistry('na-ion')}
+            className={`px-3 py-1 rounded-full font-bold transition-all whitespace-nowrap ${
+              selectedChemistry === 'na-ion'
+                ? 'bg-teal-600 text-white shadow-xs'
+                : 'bg-white text-teal-800 hover:bg-teal-50 border border-teal-200'
+            }`}
+          >
+            Pin & Ắc Quy Sạc Natri-ion Na-ion (-40°C Chống Cháy)
+          </button>
+          <button
+            onClick={() => onSelectChemistry('nimh')}
+            className={`px-3 py-1 rounded-full font-bold transition-all whitespace-nowrap ${
+              selectedChemistry === 'nimh'
+                ? 'bg-emerald-600 text-white shadow-xs'
+                : 'bg-white text-slate-600 hover:bg-slate-200/70 border border-slate-200'
+            }`}
+          >
+            Pin Sạc Ni-MH (2,100 Lần AA/AAA/C/D)
+          </button>
+          <button
+            onClick={() => onSelectChemistry('nicd')}
+            className={`px-3 py-1 rounded-full font-semibold transition-all whitespace-nowrap ${
+              selectedChemistry === 'nicd'
+                ? 'bg-amber-600 text-white shadow-xs'
+                : 'bg-white text-slate-600 hover:bg-slate-200/70 border border-slate-200'
+            }`}
+          >
+            Pin Sạc Ni-Cd Xả Cao 15C (Sub-C)
+          </button>
+          <button
             onClick={() => onSelectChemistry('alkaline')}
             className={`px-3 py-1 rounded-full font-semibold transition-all whitespace-nowrap ${
               selectedChemistry === 'alkaline'
@@ -142,7 +180,7 @@ export const Header: React.FC<HeaderProps> = ({
                 : 'bg-white text-slate-600 hover:bg-slate-200/70 border border-slate-200'
             }`}
           >
-            Ắc quy khô VRLA AGM & Gel (12V/6V)
+            Ắc quy sạc VRLA AGM & Gel Chì Acid (12V/6V)
           </button>
           <button
             onClick={() => onSelectChemistry('lithium-primary')}

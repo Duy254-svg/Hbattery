@@ -34,15 +34,22 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       
       {/* Top badges - To rõ, đẹp */}
       <div className="absolute top-3.5 left-3.5 right-3.5 z-10 flex items-center justify-between pointer-events-none">
-        {product.badge ? (
-          <span className="bg-sky-500 text-slate-950 text-xs font-black px-3 py-1 rounded-full shadow-md">
-            {product.badge}
-          </span>
-        ) : (
-          <span className="bg-slate-900/90 backdrop-blur-xs text-sky-400 text-xs font-mono font-bold px-2.5 py-1 rounded-full border border-slate-700">
-            {product.code}
-          </span>
-        )}
+        <div className="flex items-center gap-1.5 flex-wrap">
+          {product.badge ? (
+            <span className="bg-sky-500 text-slate-950 text-xs font-black px-3 py-1 rounded-full shadow-md">
+              {product.badge}
+            </span>
+          ) : (
+            <span className="bg-slate-900/90 backdrop-blur-xs text-sky-400 text-xs font-mono font-bold px-2.5 py-1 rounded-full border border-slate-700">
+              {product.code}
+            </span>
+          )}
+          {product.isRechargeable && (
+            <span className="bg-emerald-600 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow-sm flex items-center gap-1">
+              <span>⚡ Sạc được</span>
+            </span>
+          )}
+        </div>
 
         <div className="flex items-center gap-1.5 bg-white/95 px-2.5 py-1 rounded-full shadow-sm text-xs font-black text-slate-800 border border-slate-200">
           <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
@@ -105,12 +112,25 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           {/* Technical Specs Summary (Clean, no suggestion fluff) */}
           <div className="mt-3 grid grid-cols-2 gap-2 text-xs text-slate-600 bg-slate-50 p-2.5 rounded-xl border border-slate-200/80">
             <div>
-              <span className="text-slate-400 block text-[10px]">Dung lượng:</span>
+              <span className="text-slate-400 block text-[10px]">
+                {product.isSolar ? 'Công suất Solar:' : 'Dung lượng:'}
+              </span>
               <strong className="text-slate-800 font-bold">{product.capacity}</strong>
             </div>
             <div>
-              <span className="text-slate-400 block text-[10px]">Chống rò rỉ:</span>
-              <strong className="text-emerald-600 font-bold">100% An toàn</strong>
+              <span className="text-slate-400 block text-[10px]">
+                {product.isRechargeable ? 'Khả năng nạp sạc:' : 'Chống rò rỉ:'}
+              </span>
+              <strong className="text-emerald-600 font-bold flex items-center gap-1">
+                {product.isRechargeable ? (
+                  <>
+                    <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <span>Tái sạc {product.rechargeCycles ? `${product.rechargeCycles.toLocaleString()} lần` : '500+ lần'}</span>
+                  </>
+                ) : (
+                  '100% An toàn'
+                )}
+              </strong>
             </div>
           </div>
         </div>
@@ -138,7 +158,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                       : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300'
                   }`}
                 >
-                  <div className="truncate text-xs font-bold">{pack.name}</div>
+                  <div className="truncate text-xs font-bold">
+                    <span>{pack.name}</span>
+                  </div>
                   <div className={`text-xs font-black mt-0.5 ${isSelected ? 'text-white' : 'text-slate-950'}`}>
                     {pack.price.toLocaleString('vi-VN')}₫
                   </div>
@@ -150,14 +172,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           {/* Price display & Add to cart button */}
           <div className="mt-4 pt-3.5 flex items-center justify-between gap-3">
             <div>
-              <div className="text-xl sm:text-2xl font-black text-slate-950 tracking-tight">
+              <span className="text-xl sm:text-2xl font-black text-slate-950 tracking-tight">
                 {currentPack.price.toLocaleString('vi-VN')}₫
-              </div>
-              {currentPack.originalPrice && (
-                <div className="text-xs text-slate-400 line-through">
-                  {currentPack.originalPrice.toLocaleString('vi-VN')}₫
-                </div>
-              )}
+              </span>
             </div>
 
             <div className="flex items-center gap-2">

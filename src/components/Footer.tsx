@@ -24,7 +24,7 @@ export const Footer: React.FC<FooterProps> = ({
             <BrandLogo size="lg" showBadge={true} darkText={false} />
 
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              <strong className="text-slate-200">Hbattery</strong> là thương hiệu dẫn đầu về giải pháp năng lượng sơ cấp dùng 1 lần (Primary Batteries). Đổi mới với công nghệ khóa dòng PowerLock kép, cam kết bảo vệ 100% linh kiện và bo mạch của thiết bị người tiêu dùng.
+              <strong className="text-slate-200">Hbattery</strong> là hệ sinh thái năng lượng và pin toàn diện: Pin dùng 1 lần chống rò rỉ, Pin sạc chu kỳ cao (Ni-MH, Li-ion, Na-ion), Tấm pin mặt trời SolarPro và Giải pháp lưu điện (LiFePO4, VRLA AGM). Cam kết an toàn tuyệt đối và hiệu suất bền bỉ.
             </p>
 
             <div className="flex flex-wrap gap-2 pt-1 text-[11px] text-slate-300">

@@ -69,6 +69,16 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                 <span className="bg-slate-800 text-slate-300 font-mono text-xs px-2.5 py-1 rounded-full border border-slate-700">
                   Mã IEC: {product.code}
                 </span>
+                {product.isRechargeable ? (
+                  <span className="bg-emerald-500/20 text-emerald-400 border border-emerald-500/50 text-xs font-black px-3 py-1 rounded-full flex items-center gap-1.5 shadow-sm">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>SẠC LẠI ĐƯỢC ({product.rechargeCycles ? `${product.rechargeCycles.toLocaleString()} lần` : '500+ lần'})</span>
+                  </span>
+                ) : (
+                  <span className="bg-slate-800/80 text-slate-400 text-xs font-bold px-2.5 py-1 rounded-full border border-slate-700">
+                    Pin dùng 1 lần
+                  </span>
+                )}
               </div>
 
               {/* Product Title with sky blue H */}
@@ -171,8 +181,10 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                   <strong className="text-white font-bold text-xs capitalize">{product.chemistry}</strong>
                 </div>
                 <div className="bg-slate-900/90 p-3.5 rounded-2xl border border-slate-800">
-                  <span className="text-slate-400 text-xs block mb-1">Chống rò rỉ</span>
-                  <strong className="text-emerald-400 font-bold text-xs">PowerLock Kép</strong>
+                  <span className="text-slate-400 text-xs block mb-1">Loại nguồn điện</span>
+                  <strong className="text-emerald-400 font-bold text-xs">
+                    {product.isRechargeable ? `Sạc lại (${product.rechargeCycles ? `${product.rechargeCycles.toLocaleString()} lần` : '500+ lần'})` : 'Dùng 1 lần (Chống rò rỉ)'}
+                  </strong>
                 </div>
               </div>
             </div>
@@ -213,11 +225,6 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                         <span className="text-base sm:text-lg font-black text-white">
                           {pack.price.toLocaleString('vi-VN')}₫
                         </span>
-                        {pack.originalPrice && (
-                          <span className="text-xs text-slate-500 line-through">
-                            {pack.originalPrice.toLocaleString('vi-VN')}₫
-                          </span>
-                        )}
                       </div>
                     </button>
                   );

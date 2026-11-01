@@ -13,10 +13,10 @@ export const BatteryGuideSection: React.FC = () => {
             <span>Kiến Thức Năng Lượng Chuyên Sâu</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-            Cẩm Nang An Toàn Cho Pin Dùng 1 Lần <span className="text-sky-500">H</span>battery
+            Cẩm Nang Phân Biệt & An Toàn Pin <span className="text-sky-500">H</span>battery
           </h2>
           <p className="text-slate-600 text-sm mt-2">
-            Hiểu đúng bản chất pin sơ cấp (Primary Battery) giúp bạn kéo dài tuổi thọ thiết bị và đảm bảo an toàn tuyệt đối cho cả gia đình.
+            Hiểu rõ sự khác biệt giữa pin dùng 1 lần (Primary) và pin sạc (Secondary) giúp bạn chọn đúng loại, kéo dài tuổi thọ thiết bị và đảm bảo an toàn tuyệt đối.
           </p>
         </div>
 

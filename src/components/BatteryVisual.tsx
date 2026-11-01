@@ -19,10 +19,141 @@ export const BatteryVisual: React.FC<BatteryVisualProps> = ({
   isPack = false,
   packCount = 1
 }) => {
+  // Solar Panel Photovoltaic
+  const isSolar = chemistry === 'solar' || size.startsWith('Solar-');
+
+  if (isSolar) {
+    return (
+      <div className={`relative flex items-center justify-center p-2 select-none ${className}`}>
+        <div className="absolute inset-0 bg-sky-500/15 rounded-3xl blur-2xl"></div>
+
+        {/* 3D Solar Panel Module: Dark Monocrystalline cells with silver busbars, aluminum frame, sky-blue H logo */}
+        <div className="relative flex flex-col items-center">
+          <div className="w-56 h-48 bg-neutral-900 rounded-xl p-2.5 shadow-[0_20px_45px_rgba(0,0,0,0.65),inset_0_1px_2px_rgba(255,255,255,0.2)] border-2 border-slate-600 flex flex-col justify-between overflow-hidden relative">
+            {/* Corner protective bumpers */}
+            <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-sky-400 rounded-tl-sm"></div>
+            <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-sky-400 rounded-tr-sm"></div>
+            <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-sky-400 rounded-bl-sm"></div>
+            <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-sky-400 rounded-br-sm"></div>
+
+            {/* Monocrystalline photovoltaic cell wafer grid */}
+            <div className="grid grid-cols-4 grid-rows-3 gap-1 w-full h-28 bg-neutral-950 p-1.5 rounded-lg border border-neutral-800 shadow-inner">
+              {[...Array(12)].map((_, i) => (
+                <div key={i} className="bg-gradient-to-br from-slate-900 via-sky-950 to-neutral-950 rounded-xs border border-sky-500/20 relative overflow-hidden flex flex-col justify-between p-0.5">
+                  {/* Subtle busbar lines */}
+                  <div className="w-full h-px bg-slate-400/40 my-auto"></div>
+                  <div className="w-full h-px bg-slate-400/40 my-auto"></div>
+                </div>
+              ))}
+            </div>
+
+            {/* Lower brand bar & specs */}
+            <div className="flex items-center justify-between mt-2 pt-1 border-t border-neutral-800 z-10">
+              <div className="flex items-center gap-1">
+                <span className="text-sky-400 font-black text-xl drop-shadow-[0_0_10px_rgba(56,189,248,0.9)]">H</span>
+                <span className="text-white font-extrabold text-sm tracking-tight">battery</span>
+                <span className="text-[9px] font-mono font-bold text-amber-400 bg-amber-400/10 px-1 rounded ml-1 border border-amber-400/30">
+                  SOLAR
+                </span>
+              </div>
+              <div className="text-right">
+                <span className="text-xs font-mono font-black text-sky-400 block">{size}</span>
+                <span className="text-[8px] text-slate-400 font-mono block">MONO ETFE 24.5%</span>
+              </div>
+            </div>
+
+            {/* High-gloss sun reflection sheen */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.06] to-transparent pointer-events-none"></div>
+          </div>
+        </div>
+
+        {isPack && packCount > 1 && (
+          <div className="absolute top-2 right-2 bg-sky-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded-full shadow-lg border border-sky-300">
+            x{packCount} tấm
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  // LiFePO4 Smart Energy Storage / Powerwall
+  const isLiFePO4 = chemistry === 'lifepo4' || size.startsWith('LiFePO4-');
+
+  if (isLiFePO4) {
+    return (
+      <div className={`relative flex items-center justify-center p-2 select-none ${className}`}>
+        <div className="absolute inset-0 bg-sky-500/15 rounded-3xl blur-2xl"></div>
+
+        {/* 3D Smart LiFePO4 Power Block */}
+        <div className="relative flex flex-col items-center">
+          {/* Top terminals */}
+          <div className="flex justify-between w-48 px-4 mb-1 z-10">
+            <div className="flex items-center gap-1">
+              <div className="w-3.5 h-3 bg-red-600 rounded-sm border border-red-400 flex items-center justify-center text-[8px] font-bold text-white shadow-xs">+</div>
+              <span className="text-[9px] text-red-400 font-mono font-bold">M8 Terminal</span>
+            </div>
+            <div className="flex items-center gap-1">
+              <span className="text-[9px] text-slate-300 font-mono font-bold">Smart BMS</span>
+              <div className="w-3.5 h-3 bg-neutral-900 rounded-sm border border-neutral-600 flex items-center justify-center text-[8px] font-bold text-white shadow-xs">-</div>
+            </div>
+          </div>
+
+          <div className="w-52 h-52 bg-gradient-to-b from-neutral-900 via-neutral-950 to-black rounded-2xl shadow-[0_25px_50px_rgba(0,0,0,0.65),inset_0_1px_2px_rgba(255,255,255,0.15)] border-2 border-neutral-800 p-3.5 flex flex-col justify-between relative overflow-hidden">
+            {/* LED Status Bar & SOC Display */}
+            <div className="w-full bg-neutral-950/90 rounded-lg p-2 border border-neutral-800 flex items-center justify-between">
+              <div className="flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span className="text-[9px] font-mono text-emerald-400 font-bold">ACTIVE BMS</span>
+              </div>
+              <div className="flex gap-1">
+                <span className="w-2.5 h-1 rounded-xs bg-emerald-400"></span>
+                <span className="w-2.5 h-1 rounded-xs bg-emerald-400"></span>
+                <span className="w-2.5 h-1 rounded-xs bg-emerald-400"></span>
+                <span className="w-2.5 h-1 rounded-xs bg-emerald-400"></span>
+                <span className="w-2.5 h-1 rounded-xs bg-emerald-400/30"></span>
+              </div>
+            </div>
+
+            {/* Brand Logo & Model */}
+            <div className="flex flex-col items-center my-auto z-10">
+              <div className="flex items-center gap-1">
+                <span className="text-sky-400 font-black text-3xl drop-shadow-[0_0_14px_rgba(56,189,248,0.9)]">H</span>
+                <span className="text-white font-black text-xl tracking-tight">battery</span>
+              </div>
+              <span className="text-[9px] font-black text-sky-400 uppercase tracking-widest mt-0.5 font-mono">
+                LiFePO4 LITHIUM IRON PHOSPHATE
+              </span>
+              <div className="mt-2 font-mono font-black text-white text-base tracking-wider bg-black/90 px-3 py-1 rounded-lg border border-sky-400/60 shadow-[0_0_12px_rgba(56,189,248,0.25)]">
+                {size}
+              </div>
+              <span className="text-[10px] text-sky-300 font-mono font-bold mt-1">
+                {voltage} • 6,000+ Deep Cycles
+              </span>
+            </div>
+
+            {/* Safety spec footer */}
+            <div className="w-full bg-neutral-950/90 border border-neutral-800 rounded-lg p-1.5 flex justify-between items-center text-[8px] text-neutral-400 font-mono z-10">
+              <span className="text-emerald-400 font-bold">BLUETOOTH 5.0</span>
+              <span className="text-sky-400 font-bold">CHỐNG CHÁY NỔ</span>
+            </div>
+
+            <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.04] to-transparent pointer-events-none"></div>
+          </div>
+        </div>
+
+        {isPack && packCount > 1 && (
+          <div className="absolute top-2 right-2 bg-sky-500 text-slate-950 text-xs font-black px-2.5 py-1 rounded-full shadow-lg border border-sky-300">
+            x{packCount} bộ
+          </div>
+        )}
+      </div>
+    );
+  }
+
   // Accumulator / Ắc quy VRLA lead-acid blocks
   const isAccumulator =
     chemistry === 'lead-acid-vrla' ||
-    ['12V-7.2Ah', '12V-12Ah', '12V-5Ah', '12V-7Ah', '12V-20Ah', '12V-30Ah', '6V-4.5Ah', '6V-12Ah'].includes(size);
+    ['12V-7.2Ah', '12V-12Ah', '12V-5Ah', '12V-7Ah', '12V-14Ah', '12V-20Ah', '12V-30Ah', '12V-35Ah', '12V-50Ah', '12V-100Ah', '6V-4.5Ah', '6V-10Ah', '6V-12Ah'].includes(size);
 
   if (isAccumulator) {
     return (
@@ -85,8 +216,9 @@ export const BatteryVisual: React.FC<BatteryVisualProps> = ({
                 <span className="text-white font-black text-xl tracking-tight">battery</span>
               </div>
 
-              <span className="text-[9px] font-black text-sky-400 uppercase tracking-widest mt-0.5 font-mono">
-                VRLA AGM GEL • DEEP CYCLE
+              <span className="text-[9px] font-black text-emerald-400 uppercase tracking-widest mt-0.5 font-mono flex items-center gap-1">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                ẮC QUY SẠC LẠI • RECHARGEABLE
               </span>
 
               {/* Hộp dung lượng to nổi bật */}
@@ -95,19 +227,19 @@ export const BatteryVisual: React.FC<BatteryVisualProps> = ({
               </div>
 
               <span className="text-[11px] text-sky-300 font-mono font-bold mt-1">
-                {voltage} • Sealed Lead Acid
+                {voltage} • Sealed Lead Acid / VRLA AGM
               </span>
             </div>
 
             {/* Bảng thông số nạp điện & cảnh báo an toàn phía đáy bình */}
             <div className="w-full bg-neutral-950/90 border border-neutral-800 rounded-lg p-1.5 flex justify-between items-center text-[8px] text-neutral-400 font-mono z-10">
               <div>
-                <span className="text-neutral-500 block">STANDBY: 13.5-13.8V</span>
-                <span className="text-neutral-500 block">CYCLE: 14.4-15.0V</span>
+                <span className="text-emerald-400 font-bold block">TÁI NẠP: 500-1,200 LẦN</span>
+                <span className="text-neutral-500 block">SẠC: 13.8V - 14.8V</span>
               </div>
               <div className="text-right">
                 <span className="text-emerald-400 font-bold block">100% KHÔ KÍN KHÍ</span>
-                <span className="text-sky-400 font-semibold block">MIỄN BẢO DƯỠNG</span>
+                <span className="text-sky-400 font-semibold block">VRLA AGM GEL</span>
               </div>
             </div>
 
@@ -310,29 +442,44 @@ export const BatteryVisual: React.FC<BatteryVisualProps> = ({
 
   // Cylindrical batteries (AA, AAA, AAAA, N, C, D, CR123A, CR2, ER14250, ER14505)
   // THIẾT KẾ LẠI: TO BỀ THẾ, SẮC NÉT, MÀU ĐEN HUYỀN BÍ, CHỮ H MÀU XANH DA TRỜI RỰC RỠ
+  // Cylindrical batteries (AA, AAA, AAAA, N, C, D, CR123A, CR2, ER14250, ER14505, 18650, 21700, 26650, Sub-C, Na-18650, Na-32140)
   const isCylinderSmall = ['AAA', 'AAAA', 'N', 'A23', 'A27'].includes(size);
-  const isCylinderFat = ['C', 'D'].includes(size);
+  const isCylinderFat = ['C', 'D', '26650', 'Na-32140', 'Sub-C'].includes(size);
   const isLithium = chemistry === 'lithium-primary';
+  const isRechargeableLi = chemistry === 'li-ion';
+  const isNaIon = chemistry === 'na-ion' || size.startsWith('Na-');
+  const isNiMH = chemistry === 'nimh';
+  const isNiCd = chemistry === 'nicd';
 
-  // Điều chỉnh kích thước lớn hơn đáng kể để không bao giờ bị "bé thế"
+  // Điều chỉnh kích thước chuẩn xác, bề thế
   const widthClass =
-    size === 'D'
+    size === 'Na-32140'
+      ? 'w-34'
+      : size === 'D' || size === '26650'
       ? 'w-32'
-      : size === 'C'
-      ? 'w-26'
+      : size === 'C' || size === 'Sub-C' || size === '21700'
+      ? 'w-28'
       : size === 'AAAA'
       ? 'w-14 sm:w-16'
       : size === 'AAA' || size === 'A23' || size === 'A27' || size === 'N'
       ? 'w-16 sm:w-18'
       : size === 'CR123A' || size === 'CR2' || size === 'ER14250'
       ? 'w-22'
-      : 'w-22 sm:w-26'; // AA, ER14505
+      : 'w-22 sm:w-26'; // AA, 18650, Na-18650, ER14505
 
   const heightClass =
-    size === 'D'
+    size === 'Na-32140'
+      ? 'h-64'
+      : size === '21700'
+      ? 'h-60'
+      : size === '18650' || size === 'Na-18650' || size === '26650'
+      ? 'h-58'
+      : size === 'D'
       ? 'h-56'
       : size === 'C'
       ? 'h-52'
+      : size === 'Sub-C'
+      ? 'h-46'
       : size === 'AAAA'
       ? 'h-48'
       : size === 'CR123A' || size === 'CR2' || size === 'ER14250'
@@ -340,6 +487,18 @@ export const BatteryVisual: React.FC<BatteryVisualProps> = ({
       : size === 'AAA'
       ? 'h-48'
       : 'h-54'; // AA
+
+  const collarGradient = isNaIon
+    ? 'from-teal-400 via-cyan-300 to-teal-500'
+    : isRechargeableLi
+    ? 'from-sky-400 via-cyan-300 to-sky-500'
+    : isNiMH
+    ? 'from-emerald-400 via-emerald-200 to-emerald-500'
+    : isNiCd
+    ? 'from-amber-500 via-orange-300 to-amber-600'
+    : isLithium
+    ? 'from-sky-400 via-cyan-300 to-sky-500'
+    : 'from-amber-400 via-amber-200 to-amber-500';
 
   return (
     <div className={`relative flex items-center justify-center p-3 select-none ${className}`}>
@@ -352,13 +511,9 @@ export const BatteryVisual: React.FC<BatteryVisualProps> = ({
           <div className="w-2.5 h-1 bg-slate-500 rounded-full opacity-60"></div>
         </div>
 
-        {/* Vành vai pin màu vàng kim hoặc xanh ngọc */}
+        {/* Vành vai pin công nghệ */}
         <div
-          className={`w-full ${widthClass} h-3 bg-gradient-to-r ${
-            isLithium
-              ? 'from-sky-400 via-cyan-300 to-sky-500'
-              : 'from-amber-400 via-amber-200 to-amber-500'
-          } rounded-t-xl shadow-xs border-x border-neutral-700`}
+          className={`w-full ${widthClass} h-3 bg-gradient-to-r ${collarGradient} rounded-t-xl shadow-xs border-x border-neutral-700`}
         ></div>
 
         {/* Thân pin chính hình trụ tròn 3D: Đen tuyền sang trọng (Vẫn để màu đen) */}
@@ -392,7 +547,15 @@ export const BatteryVisual: React.FC<BatteryVisualProps> = ({
 
             {/* Dòng công nghệ */}
             <span className="text-[9px] uppercase tracking-wider text-sky-300 font-bold mt-1 text-center leading-tight">
-              {chemistry === 'lithium-primary'
+              {isNaIon
+                ? 'Na-Ion Sodium Power'
+                : isRechargeableLi
+                ? 'Li-Ion 1000+ Cycles'
+                : isNiMH
+                ? 'Ni-MH Pro Rechargeable'
+                : isNiCd
+                ? 'Ni-Cd High Drain 15C'
+                : chemistry === 'lithium-primary'
                 ? 'Lithium 10X Power'
                 : chemistry === 'carbon-zinc'
                 ? 'Heavy Duty Zinc'
@@ -405,7 +568,9 @@ export const BatteryVisual: React.FC<BatteryVisualProps> = ({
             <div className="w-full h-1.5 bg-gradient-to-r from-sky-400 via-sky-200 to-sky-500 rounded-full mb-1 shadow-[0_0_6px_rgba(56,189,248,0.7)]"></div>
             <div className="flex justify-between w-full text-[9px] text-neutral-400 font-mono px-1">
               <span className="font-bold text-neutral-300">-</span>
-              <span className="text-[8px] text-sky-400 font-semibold">0% Hg • LEAKPROOF</span>
+              <span className="text-[8px] text-sky-400 font-semibold">
+                {isRechargeableLi || isNaIon || isNiMH || isNiCd ? 'RECHARGEABLE (SẠC LẠI)' : '0% Hg • LEAKPROOF'}
+              </span>
             </div>
           </div>
         </div>

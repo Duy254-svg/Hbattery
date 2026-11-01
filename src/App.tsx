@@ -18,7 +18,8 @@ import { BatteryGuideSection } from './components/BatteryGuideSection';
 import { CustomerReviews } from './components/CustomerReviews';
 import { Footer } from './components/Footer';
 import { SizeSelector } from './components/SizeSelector';
-import { Filter, SlidersHorizontal, Sparkles, Check, AlertCircle, ShoppingCart } from 'lucide-react';
+import { BatteryLongevityCalculator } from './components/BatteryLongevityCalculator';
+import { Filter, SlidersHorizontal, Sparkles, Check, AlertCircle, ShoppingCart, Calculator } from 'lucide-react';
 
 export default function App() {
   // Products
@@ -139,11 +140,15 @@ export default function App() {
   // Device Tags
   const deviceTags = [
     { id: 'all', label: 'Tất cả thiết bị' },
-    { id: 'accu', label: 'Ắc Quy Khô & Lưu Điện UPS' },
+    { id: 'solar', label: '☀️ Pin Mặt Trời Solar' },
+    { id: 'recharge', label: '⚡ Pin & Ắc Quy Sạc Lại (VRLA/AGM/Li-ion/Na-ion/NiMH)' },
+    { id: 'lifepo4', label: '🔋 LiFePO4 Lưu Điện Gia Đình' },
+    { id: 'powertool', label: '🔧 Máy Khoan Pin & Công Cụ' },
+    { id: 'accu', label: 'Ắc Quy Sạc VRLA/AGM & UPS Lưu Điện' },
     { id: 'smartkey', label: 'Smartkey Ô tô / Xe Máy' },
     { id: 'smartlock', label: 'Khóa Vân Tay' },
     { id: 'stylus', label: 'Bút Surface Stylus AAAA' },
-    { id: 'ninev', label: 'Pin Vuông 9V (Alkaline/Lithium/Carbon)' },
+    { id: 'ninev', label: 'Pin Vuông 9V (Alkaline/Lithium/USB-C)' },
     { id: 'remote', label: 'Remote Tivi/Lạnh' },
     { id: 'camera', label: 'Đèn Flash / Máy Ảnh' },
     { id: 'film', label: 'Máy Ảnh Film (2CR5/4LR44)' },
@@ -182,26 +187,33 @@ export default function App() {
 
       // Device Tag
       if (selectedDeviceTag !== 'all') {
-        const tagMap: Record<string, string[]> = {
-          accu: ['ắc quy', 'ups', 'lưu điện', 'xe đạp điện', 'xe máy', 'agm', 'vrla', 'cửa cuốn', 'lead-acid', 'inverter', 'solar'],
-          smartkey: ['smartkey', 'chìa khóa', 'xe hơi', 'honda', 'toyota', 'lexus', 'mazda', 'ô tô', 'cr2032', 'cr1632', 'cr1620', 'cr1616', 'cr2025'],
-          smartlock: ['khóa cửa', 'vân tay', 'kaadas', 'yale', 'bosch'],
-          stylus: ['bút cảm ứng', 'surface', 'stylus', 'wacom', 'aaaa', 'lr61'],
-          ninev: ['9v', 'u9vl', '6lr61', '6f22', 'khử rung tim', 'aed', 'báo khói'],
-          remote: ['remote', 'điều khiển', 'tivi', 'máy lạnh', 'quạt'],
-          camera: ['máy ảnh', 'flash', 'cr123a', 'cr2', 'instax', 'gps'],
-          film: ['máy ảnh film', 'canon ae-1', '2cr5', 'cr-p2', '4lr44', 'minolta'],
-          stove: ['bếp gas', 'bình nóng lạnh', 'đại d'],
-          medical: ['y tế', 'nhiệt kế', 'microlife', 'omron', 'lr41', 'cr1220', 'đường huyết', 'aed', 'khử rung tim'],
-          hearing: ['trợ thính', 'zinc-air', 'a312', 'a10', 'a13', 'a675', 'ốc tai'],
-          iot: ['aqara', 'zigbee', 'cảm biến', 'cr2450', 'cr2430', 'smart home'],
-          watch: ['đồng hồ', 'quartz', 'treo tường', 'kim trôi', 'sr626sw', 'sr621sw', 'sr920sw', 'chronograph'],
-          door: ['cửa cuốn', 'chuông', 'a23', 'a27']
-        };
-        const keywords = tagMap[selectedDeviceTag] || [];
-        const fullText = (p.name + ' ' + p.recommendedDevices.join(' ') + ' ' + p.description).toLowerCase();
-        const matchTag = keywords.some(k => fullText.includes(k));
-        if (!matchTag) return false;
+        if (selectedDeviceTag === 'recharge') {
+          if (!p.isRechargeable) return false;
+        } else {
+          const tagMap: Record<string, string[]> = {
+            solar: ['mặt trời', 'solar', 'quang điện', 'etfe', 'mono', '60w', '100w', '200w', '450w', 'bifacial'],
+            lifepo4: ['lifepo4', 'powerwall', 'lưu trữ', 'bms', 'bluetooth', '48v', '24v', '12.8v', '5.12kwh'],
+            powertool: ['máy khoan', 'máy cưa', 'máy siết', 'công cụ', 'sub-c', '30a', 'high-drain', 'dyson', 'makita', 'bosch'],
+            accu: ['ắc quy', 'ups', 'lưu điện', 'xe đạp điện', 'xe máy', 'agm', 'vrla', 'cửa cuốn', 'lead-acid', 'inverter', 'solar'],
+            smartkey: ['smartkey', 'chìa khóa', 'xe hơi', 'honda', 'toyota', 'lexus', 'mazda', 'ô tô', 'cr2032', 'cr1632', 'cr1620', 'cr1616', 'cr2025'],
+            smartlock: ['khóa cửa', 'vân tay', 'kaadas', 'yale', 'bosch'],
+            stylus: ['bút cảm ứng', 'surface', 'stylus', 'wacom', 'aaaa', 'lr61'],
+            ninev: ['9v', 'u9vl', '6lr61', '6f22', 'khử rung tim', 'aed', 'báo khói'],
+            remote: ['remote', 'điều khiển', 'tivi', 'máy lạnh', 'quạt'],
+            camera: ['máy ảnh', 'flash', 'cr123a', 'cr2', 'instax', 'gps'],
+            film: ['máy ảnh film', 'canon ae-1', '2cr5', 'cr-p2', '4lr44', 'minolta'],
+            stove: ['bếp gas', 'bình nóng lạnh', 'đại d'],
+            medical: ['y tế', 'nhiệt kế', 'microlife', 'omron', 'lr41', 'cr1220', 'đường huyết', 'aed', 'khử rung tim'],
+            hearing: ['trợ thính', 'zinc-air', 'a312', 'a10', 'a13', 'a675', 'ốc tai'],
+            iot: ['aqara', 'zigbee', 'cảm biến', 'cr2450', 'cr2430', 'smart home'],
+            watch: ['đồng hồ', 'quartz', 'treo tường', 'kim trôi', 'sr626sw', 'sr621sw', 'sr920sw', 'chronograph'],
+            door: ['cửa cuốn', 'chuông', 'a23', 'a27']
+          };
+          const keywords = tagMap[selectedDeviceTag] || [];
+          const fullText = (p.name + ' ' + p.recommendedDevices.join(' ') + ' ' + p.description).toLowerCase();
+          const matchTag = keywords.some(k => fullText.includes(k));
+          if (!matchTag) return false;
+        }
       }
 
       return true;
@@ -261,7 +273,7 @@ export default function App() {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100">
             <div>
               <h2 className="text-xl sm:text-2xl font-black text-slate-900 flex items-center gap-2">
-                <span>Kho Pin Dùng 1 Lần & Ắc Quy</span>
+                <span>Hệ Sinh Thái Pin & Năng Lượng Toàn Diện</span>
                 <span className="inline-flex items-center">
                   <span className="text-sky-500 font-black">H</span>
                   <span className="font-extrabold">battery</span>
@@ -271,17 +283,27 @@ export default function App() {
                 </span>
               </h2>
               <p className="text-xs text-slate-500 mt-0.5">
-                Được kiểm định chất lượng nghiêm ngặt • Bảo hành chống rò rỉ đền 100%
+                Pin dùng 1 lần • Pin sạc NiMH, Li-ion, Na-ion • Tấm pin mặt trời SolarPro • Ắc quy lưu điện LiFePO4, VRLA AGM
               </p>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
+              <button
+                onClick={() => {
+                  const calc = document.getElementById('longevity-calculator-section');
+                  calc?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-sky-600 text-white text-xs sm:text-sm font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-xs"
+              >
+                <Calculator className="w-4 h-4 text-sky-400" />
+                <span>Máy tính tuổi thọ pin</span>
+              </button>
               <button
                 onClick={() => setIsSpecComparisonOpen(true)}
                 className="px-3.5 py-2.5 rounded-xl border border-slate-200 hover:border-sky-300 text-slate-700 hover:text-sky-600 text-xs sm:text-sm font-bold transition-all flex items-center gap-1.5 cursor-pointer shadow-2xs"
               >
                 <SlidersHorizontal className="w-4 h-4 text-sky-500" />
-                <span>Bảng so sánh công nghệ pin & ắc quy</span>
+                <span>So sánh công nghệ</span>
               </button>
             </div>
           </div>
@@ -367,6 +389,15 @@ export default function App() {
         )}
 
       </main>
+
+      {/* Battery Longevity Calculator Section */}
+      <div id="longevity-calculator-section" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <BatteryLongevityCalculator
+          products={products}
+          onAddToCart={(prod, pack) => handleAddToCart(prod, pack, 1)}
+          onViewDetails={(prod) => setDetailProduct(prod)}
+        />
+      </div>
 
       {/* Safety & Educational Guide */}
       <BatteryGuideSection />

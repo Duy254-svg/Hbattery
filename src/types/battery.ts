@@ -5,7 +5,13 @@ export type ChemistryType =
   | 'silver-oxide' 
   | 'zinc-air' 
   | 'lithium-coin'
-  | 'lead-acid-vrla';
+  | 'lead-acid-vrla'
+  | 'nimh'
+  | 'nicd'
+  | 'li-ion'
+  | 'lifepo4'
+  | 'na-ion'
+  | 'solar';
 
 export type BatterySize = 
   | 'AA' 
@@ -45,10 +51,28 @@ export type BatterySize =
   | '12V-12Ah'
   | '12V-5Ah'
   | '12V-7Ah'
+  | '12V-14Ah'
   | '12V-20Ah'
   | '12V-30Ah'
+  | '12V-35Ah'
+  | '12V-50Ah'
+  | '12V-100Ah'
   | '6V-4.5Ah'
+  | '6V-10Ah'
   | '6V-12Ah'
+  | '18650'
+  | '21700'
+  | '26650'
+  | 'Sub-C'
+  | 'LiFePO4-12V'
+  | 'LiFePO4-24V'
+  | 'LiFePO4-48V'
+  | 'Na-18650'
+  | 'Na-32140'
+  | 'Solar-60W'
+  | 'Solar-100W'
+  | 'Solar-200W'
+  | 'Solar-450W'
   | 'CR2477'
   | 'ER14250'
   | 'ER14505'
@@ -94,6 +118,12 @@ export interface BatteryProduct {
     accent: string;
     border: string;
   };
+  isRechargeable?: boolean;
+  rechargeCycles?: number; // e.g. 1000, 2100, 6000
+  isSolar?: boolean;
+  solarWattage?: string;
+  efficiency?: string;
+  dischargeCurrent?: string;
 }
 
 export interface CartItem {

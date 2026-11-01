@@ -22,17 +22,17 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
           {/* Left Column: Brand pitch & Action */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
             {/* Brand badge note */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-sky-400/30 text-sky-300 text-xs font-semibold backdrop-blur-xs">
-              <span className="w-2 h-2 rounded-full bg-sky-400 animate-ping"></span>
-              <span>Tổng Kho Pin Sơ Cấp & Ắc Quy Khô Hàng Đầu</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-sky-500/30 text-sky-300 text-xs font-semibold backdrop-blur-xs">
+              <span className="w-2 h-2 rounded-full bg-sky-400"></span>
+              <span className="text-slate-200">Thương hiệu pin Hbattery chính hãng</span>
               <span className="bg-sky-500/20 text-sky-300 text-[10px] px-2 py-0.5 rounded-full font-bold">
-                Bảo vệ 10 năm
+                Chính Hãng 100%
               </span>
             </div>
 
             {/* Main Headline with clear sky-blue H emphasis */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
-              Năng Lượng Bền Bỉ Cùng{' '}
+              Hệ Sinh Thái Pin & Năng Lượng Đột Phá{' '}
               <span className="inline-block relative">
                 <span className="text-sky-400 font-black drop-shadow-[0_0_20px_rgba(56,189,248,0.7)]">
                   H
@@ -42,7 +42,7 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
             </h1>
 
             <p className="text-slate-300 text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed">
-              Hệ sinh thái đầy đủ tất cả các dòng <strong className="text-white font-bold">pin dùng 1 lần</strong> và <strong className="text-white font-bold">ắc quy khô VRLA</strong> chính hãng: Alkaline, Lithium sơ cấp, Pin cúc áo Smartkey, Oxit Bạc đồng hồ, Kẽm khí trợ thính và Ắc quy lưu điện UPS/Xe máy. Cam kết <strong className="text-sky-400 font-bold">chống rò rỉ 100%</strong> - an toàn tuyệt đối cho thiết bị.
+              Hệ sinh thái toàn diện: <strong className="text-white font-bold">Pin dùng 1 lần</strong>, <strong className="text-sky-400 font-bold">Pin sạc Ni-MH / Li-ion / Na-ion</strong>, <strong className="text-amber-400 font-bold">Pin năng lượng mặt trời Solar</strong> và <strong className="text-emerald-400 font-bold">Ắc quy lưu điện LiFePO4 / VRLA AGM</strong>. Cam kết điện thế ổn định, chống rò rỉ 100% - bảo vệ tuyệt đối thiết bị của bạn.
             </p>
 
             {/* Key trust bullets */}
@@ -53,11 +53,11 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
               </div>
               <div className="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-xl border border-slate-800">
                 <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
-                <span>0% Thủy ngân & Chì</span>
+                <span>Pin sạc 6,000 chu kỳ</span>
               </div>
               <div className="flex items-center gap-2 bg-slate-900/60 p-2.5 rounded-xl border border-slate-800 col-span-2 sm:col-span-1">
                 <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
-                <span>Đổi trả 1-đổi-1 nếu lỗi</span>
+                <span>Pin Solar hiệu suất 24.8%</span>
               </div>
             </div>
 
@@ -68,15 +68,22 @@ export const HeroBanner: React.FC<HeroBannerProps> = ({
                 className="flex items-center gap-2 px-7 py-4 rounded-xl bg-gradient-to-r from-sky-500 to-sky-600 hover:from-sky-400 hover:to-sky-500 text-slate-950 font-black text-sm md:text-base transition-all shadow-[0_10px_25px_rgba(14,165,233,0.35)] transform hover:-translate-y-0.5 cursor-pointer"
               >
                 <ShoppingBag className="w-5 h-5 text-slate-950" />
-                <span>Xem Ngay Kho Hàng Pin & Ắc Quy</span>
+                <span>Khám Phá Toàn Bộ Sản Phẩm</span>
                 <ArrowRight className="w-4 h-4 text-slate-950" />
+              </a>
+              <a
+                href="#longevity-calculator-section"
+                className="flex items-center gap-2 px-6 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-sky-400 border border-sky-400/40 font-black text-sm md:text-base transition-all cursor-pointer"
+              >
+                <Zap className="w-5 h-5 text-sky-400" />
+                <span>Đo Tuổi Thọ Pin (Calculator)</span>
               </a>
             </div>
 
             {/* Quick size selection chips */}
             <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-2 text-xs">
-              <span className="text-slate-400 font-semibold">Chọn kích cỡ:</span>
-              {(['AA', 'AAA', 'AAAA', '9V', '12V-7.2Ah', 'CR2032', 'CR1632', 'D', 'C', 'LR44'] as BatterySize[]).map((sz) => (
+              <span className="text-slate-400 font-semibold">Chọn nhanh:</span>
+              {(['AA', 'AAA', '18650', '21700', 'CR2032', '9V', '12V-7.2Ah', 'LiFePO4-12V', 'Solar-60W', 'Solar-100W', 'Na-18650', 'Sub-C'] as BatterySize[]).map((sz) => (
                 <button
                   key={sz}
                   onClick={() => onFilterSize(sz)}
